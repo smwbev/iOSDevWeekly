@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12A269" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Issue" syncable="YES">
-        <attribute name="publishingDate" attributeType="Date" syncable="YES"/>
-        <relationship name="news" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="issue" inverseEntity="News" syncable="YES"/>
+    <entity name="Category" representedClassName="COGUDevWeeklyCategory" syncable="YES">
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <attribute name="userReadableName" attributeType="String" syncable="YES"/>
+        <relationship name="news" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="News" inverseName="category" inverseEntity="News" syncable="YES"/>
     </entity>
-    <entity name="News" syncable="YES">
-        <attribute name="category" attributeType="String" syncable="YES"/>
+    <entity name="Issue" representedClassName="COGUDevWeeklyIssue" syncable="YES">
+        <attribute name="publishingDate" attributeType="Date" syncable="YES"/>
+        <attribute name="userReadableName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="news" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="News" inverseName="issue" inverseEntity="News" syncable="YES"/>
+    </entity>
+    <entity name="News" representedClassName="COGUDevWeeklyNews" syncable="YES">
         <attribute name="completeTextUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="explanation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
-        <relationship name="issue" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="news" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="news" inverseEntity="Category" syncable="YES"/>
+        <relationship name="issue" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="news" inverseEntity="Issue" syncable="YES"/>
     </entity>
     <elements>
         <element name="News" positionX="-63" positionY="-18" width="128" height="114"/>
-        <element name="Issue" positionX="-54" positionY="27" width="128" height="69"/>
+        <element name="Issue" positionX="-54" positionY="27" width="128" height="84"/>
+        <element name="Category" positionX="160" positionY="192" width="128" height="84"/>
     </elements>
 </model>
