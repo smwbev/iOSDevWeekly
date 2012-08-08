@@ -1,0 +1,3 @@
+[submodule "iOSDevWeekly/Vendor/AFNetworking"]
+	path = iOSDevWeekly/Vendor/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
