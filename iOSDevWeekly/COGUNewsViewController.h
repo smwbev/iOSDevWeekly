@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface COGUViewController : UIViewController
+@interface COGUNewsViewController : UIViewController
 
 @end

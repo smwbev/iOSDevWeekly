@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class COGUViewController;
+@class COGUNewsViewController;
 
 @interface COGUAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) COGUViewController *viewController;
+@property (strong, nonatomic) COGUNewsViewController *viewController;
 
 @end

@@ -6,24 +6,22 @@
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
-#import "COGUViewController.h"
+#import "COGUNewsViewController.h"
 
-@interface COGUViewController ()
+@interface COGUNewsViewController ()
 
 @end
 
-@implementation COGUViewController
+@implementation COGUNewsViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

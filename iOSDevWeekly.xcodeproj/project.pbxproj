@@ -13,8 +13,8 @@
 		3B6B739915D27FC3006FF3F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B739715D27FC3006FF3F3 /* InfoPlist.strings */; };
 		3B6B739B15D27FC3006FF3F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B739A15D27FC3006FF3F3 /* main.m */; };
 		3B6B739F15D27FC3006FF3F3 /* COGUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B739E15D27FC3006FF3F3 /* COGUAppDelegate.m */; };
-		3B6B73A215D27FC3006FF3F3 /* COGUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73A115D27FC3006FF3F3 /* COGUViewController.m */; };
-		3B6B73A515D27FC3006FF3F3 /* COGUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B73A315D27FC3006FF3F3 /* COGUViewController.xib */; };
+		3B6B73A215D27FC3006FF3F3 /* COGUNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73A115D27FC3006FF3F3 /* COGUNewsViewController.m */; };
+		3B6B73A515D27FC3006FF3F3 /* COGUNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B73A315D27FC3006FF3F3 /* COGUNewsViewController.xib */; };
 		3B6B73AD15D27FC3006FF3F3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B73AC15D27FC3006FF3F3 /* SenTestingKit.framework */; };
 		3B6B73AE15D27FC3006FF3F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B738E15D27FC3006FF3F3 /* UIKit.framework */; };
 		3B6B73AF15D27FC3006FF3F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B739015D27FC3006FF3F3 /* Foundation.framework */; };
@@ -43,9 +43,9 @@
 		3B6B739C15D27FC3006FF3F3 /* iOSDevWeekly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDevWeekly-Prefix.pch"; sourceTree = "<group>"; };
 		3B6B739D15D27FC3006FF3F3 /* COGUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COGUAppDelegate.h; sourceTree = "<group>"; };
 		3B6B739E15D27FC3006FF3F3 /* COGUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COGUAppDelegate.m; sourceTree = "<group>"; };
-		3B6B73A015D27FC3006FF3F3 /* COGUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COGUViewController.h; sourceTree = "<group>"; };
-		3B6B73A115D27FC3006FF3F3 /* COGUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COGUViewController.m; sourceTree = "<group>"; };
-		3B6B73A415D27FC3006FF3F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/COGUViewController.xib; sourceTree = "<group>"; };
+		3B6B73A015D27FC3006FF3F3 /* COGUNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COGUNewsViewController.h; sourceTree = "<group>"; };
+		3B6B73A115D27FC3006FF3F3 /* COGUNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COGUNewsViewController.m; sourceTree = "<group>"; };
+		3B6B73A415D27FC3006FF3F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/COGUNewsViewController.xib; sourceTree = "<group>"; };
 		3B6B73AB15D27FC3006FF3F3 /* iOSDevWeeklyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDevWeeklyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6B73AC15D27FC3006FF3F3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B6B73B415D27FC3006FF3F3 /* iOSDevWeeklyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSDevWeeklyTests-Info.plist"; sourceTree = "<group>"; };
@@ -113,9 +113,9 @@
 			children = (
 				3B6B739D15D27FC3006FF3F3 /* COGUAppDelegate.h */,
 				3B6B739E15D27FC3006FF3F3 /* COGUAppDelegate.m */,
-				3B6B73A015D27FC3006FF3F3 /* COGUViewController.h */,
-				3B6B73A115D27FC3006FF3F3 /* COGUViewController.m */,
-				3B6B73A315D27FC3006FF3F3 /* COGUViewController.xib */,
+				3B6B73A015D27FC3006FF3F3 /* COGUNewsViewController.h */,
+				3B6B73A115D27FC3006FF3F3 /* COGUNewsViewController.m */,
+				3B6B73A315D27FC3006FF3F3 /* COGUNewsViewController.xib */,
 				3B6B739515D27FC3006FF3F3 /* Supporting Files */,
 			);
 			path = iOSDevWeekly;
@@ -224,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6B739915D27FC3006FF3F3 /* InfoPlist.strings in Resources */,
-				3B6B73A515D27FC3006FF3F3 /* COGUViewController.xib in Resources */,
+				3B6B73A515D27FC3006FF3F3 /* COGUNewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +261,7 @@
 			files = (
 				3B6B739B15D27FC3006FF3F3 /* main.m in Sources */,
 				3B6B739F15D27FC3006FF3F3 /* COGUAppDelegate.m in Sources */,
-				3B6B73A215D27FC3006FF3F3 /* COGUViewController.m in Sources */,
+				3B6B73A215D27FC3006FF3F3 /* COGUNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +292,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3B6B73A315D27FC3006FF3F3 /* COGUViewController.xib */ = {
+		3B6B73A315D27FC3006FF3F3 /* COGUNewsViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3B6B73A415D27FC3006FF3F3 /* en */,
 			);
-			name = COGUViewController.xib;
+			name = COGUNewsViewController.xib;
 			sourceTree = "<group>";
 		};
 		3B6B73B515D27FC3006FF3F3 /* InfoPlist.strings */ = {
