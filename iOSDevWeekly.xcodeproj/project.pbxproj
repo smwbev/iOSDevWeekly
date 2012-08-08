@@ -20,6 +20,7 @@
 		3B6B73AF15D27FC3006FF3F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B739015D27FC3006FF3F3 /* Foundation.framework */; };
 		3B6B73B715D27FC3006FF3F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B73B515D27FC3006FF3F3 /* InfoPlist.strings */; };
 		3B6B73BA15D27FC3006FF3F3 /* iOSDevWeeklyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73B915D27FC3006FF3F3 /* iOSDevWeeklyTests.m */; };
+		3B6B73C515D2858D006FF3F3 /* news.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73C315D2858D006FF3F3 /* news.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3B6B73B615D27FC3006FF3F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B6B73B815D27FC3006FF3F3 /* iOSDevWeeklyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSDevWeeklyTests.h; sourceTree = "<group>"; };
 		3B6B73B915D27FC3006FF3F3 /* iOSDevWeeklyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDevWeeklyTests.m; sourceTree = "<group>"; };
+		3B6B73C415D2858D006FF3F3 /* news.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = news.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		3B6B737F15D27FC3006FF3F3 = {
 			isa = PBXGroup;
 			children = (
+				3B6B73C315D2858D006FF3F3 /* news.xcdatamodeld */,
 				3B6B739415D27FC3006FF3F3 /* iOSDevWeekly */,
 				3B6B73B215D27FC3006FF3F3 /* iOSDevWeeklyTests */,
 				3B6B738D15D27FC3006FF3F3 /* Frameworks */,
@@ -262,6 +265,7 @@
 				3B6B739B15D27FC3006FF3F3 /* main.m in Sources */,
 				3B6B739F15D27FC3006FF3F3 /* COGUAppDelegate.m in Sources */,
 				3B6B73A215D27FC3006FF3F3 /* COGUNewsViewController.m in Sources */,
+				3B6B73C515D2858D006FF3F3 /* news.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +475,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B6B73C315D2858D006FF3F3 /* news.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B6B73C415D2858D006FF3F3 /* news.xcdatamodel */,
+			);
+			currentVersion = 3B6B73C415D2858D006FF3F3 /* news.xcdatamodel */;
+			name = news.xcdatamodeld;
+			path = iOSDevWeekly/news.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3B6B738115D27FC3006FF3F3 /* Project object */;
 }
