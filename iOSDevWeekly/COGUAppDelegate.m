@@ -20,6 +20,7 @@
     self.viewController = [[COGUNewsViewController alloc] initWithNibName:@"COGUViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 

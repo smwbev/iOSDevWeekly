@@ -6,14 +6,16 @@
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
+
 @class COGUNewsViewController;
+
 
 @interface COGUAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) COGUNewsViewController *viewController;
 
 @end
