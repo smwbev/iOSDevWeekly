@@ -6,8 +6,15 @@
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
+
 #import <SenTestingKit/SenTestingKit.h>
 
+
+@class COGUDevWeeklyNewsManager;
+
+
 @interface iOSDevWeeklyTests : SenTestCase
+
+@property (strong, nonatomic) COGUDevWeeklyNewsManager* newsManager;
 
 @end

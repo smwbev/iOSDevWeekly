@@ -38,6 +38,12 @@
 		3B6CD61915D2A3BA001EDACB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CD5F115D2A3BA001EDACB /* LICENSE */; };
 		3B6CD61A15D2A3BA001EDACB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CD5F215D2A3BA001EDACB /* README.md */; };
 		3B6CD63315D2A561001EDACB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6CD63215D2A561001EDACB /* CoreData.framework */; };
+		3B834EC715D50704006724FB /* NSArray+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */; };
+		3B834ECB15D51247006724FB /* NSMutableArray+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */; };
+		3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion"; }; };
+		3BE20DD015D2C186003D3D4B /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BE20DC015D2C186003D3D4B /* README.markdown */; };
+		3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE20DD515D2C380003D3D4B /* libxml2.dylib */; };
+		3BE20DDE15D3C5DE003D3D4B /* NSObject+COGUBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUBlocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,16 @@
 		3B6CD5F115D2A3BA001EDACB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3B6CD5F215D2A3BA001EDACB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3B6CD63215D2A561001EDACB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B834EC515D50704006724FB /* NSArray+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+COGUAdditions.h"; sourceTree = "<group>"; };
+		3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+COGUAdditions.m"; sourceTree = "<group>"; };
+		3B834EC915D51247006724FB /* NSMutableArray+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+COGUAdditions.h"; sourceTree = "<group>"; };
+		3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+COGUAdditions.m"; sourceTree = "<group>"; };
+		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
+		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
+		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		3BE20DD515D2C380003D3D4B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+COGUBlocks.h"; sourceTree = "<group>"; };
+		3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+COGUBlocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */,
 				3B6CD63315D2A561001EDACB /* CoreData.framework in Frameworks */,
 				3B6B738F15D27FC3006FF3F3 /* UIKit.framework in Frameworks */,
 				3B6B739115D27FC3006FF3F3 /* Foundation.framework in Frameworks */,
@@ -152,6 +169,7 @@
 		3B6B738D15D27FC3006FF3F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BE20DD515D2C380003D3D4B /* libxml2.dylib */,
 				3B6CD63215D2A561001EDACB /* CoreData.framework */,
 				3B6B738E15D27FC3006FF3F3 /* UIKit.framework */,
 				3B6B739015D27FC3006FF3F3 /* Foundation.framework */,
@@ -171,6 +189,7 @@
 				3B6B73A015D27FC3006FF3F3 /* COGUNewsViewController.h */,
 				3B6B73A115D27FC3006FF3F3 /* COGUNewsViewController.m */,
 				3B6B73A315D27FC3006FF3F3 /* COGUNewsViewController.xib */,
+				3BE20DDB15D3C36A003D3D4B /* iOSCategories */,
 				3B6B73CC15D2893C006FF3F3 /* ManagedObjects */,
 				3B6B739515D27FC3006FF3F3 /* Supporting Files */,
 				3B6CD5B115D2A3BA001EDACB /* Vendor */,
@@ -225,6 +244,7 @@
 		3B6CD5B115D2A3BA001EDACB /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				3BE20DA815D2C185003D3D4B /* GDataXML-HTML */,
 				3B6CD5B215D2A3BA001EDACB /* AFNetworking */,
 			);
 			path = Vendor;
@@ -258,6 +278,29 @@
 				3B6CD5F215D2A3BA001EDACB /* README.md */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3BE20DA815D2C185003D3D4B /* GDataXML-HTML */ = {
+			isa = PBXGroup;
+			children = (
+				3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */,
+				3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */,
+				3BE20DC015D2C186003D3D4B /* README.markdown */,
+			);
+			path = "GDataXML-HTML";
+			sourceTree = "<group>";
+		};
+		3BE20DDB15D3C36A003D3D4B /* iOSCategories */ = {
+			isa = PBXGroup;
+			children = (
+				3B834EC515D50704006724FB /* NSArray+COGUAdditions.h */,
+				3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */,
+				3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUBlocks.h */,
+				3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUBlocks.m */,
+				3B834EC915D51247006724FB /* NSMutableArray+COGUAdditions.h */,
+				3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */,
+			);
+			name = iOSCategories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +379,7 @@
 				3B6B73A515D27FC3006FF3F3 /* COGUNewsViewController.xib in Resources */,
 				3B6CD61915D2A3BA001EDACB /* LICENSE in Resources */,
 				3B6CD61A15D2A3BA001EDACB /* README.md in Resources */,
+				3BE20DD015D2C186003D3D4B /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +432,10 @@
 				3B6CD60215D2A3BA001EDACB /* AFURLConnectionOperation.m in Sources */,
 				3B6CD60315D2A3BA001EDACB /* AFXMLRequestOperation.m in Sources */,
 				3B6CD60415D2A3BA001EDACB /* UIImageView+AFNetworking.m in Sources */,
+				3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */,
+				3BE20DDE15D3C5DE003D3D4B /* NSObject+COGUBlocks.m in Sources */,
+				3B834EC715D50704006724FB /* NSArray+COGUAdditions.m in Sources */,
+				3B834ECB15D51247006724FB /* NSMutableArray+COGUAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,14 +513,14 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -498,15 +546,15 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

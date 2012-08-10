@@ -1,3 +1,6 @@
 [submodule "iOSDevWeekly/Vendor/AFNetworking"]
 	path = iOSDevWeekly/Vendor/AFNetworking
 	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "iOSDevWeekly/Vendor/GDataXML-HTML"]
+	path = iOSDevWeekly/Vendor/GDataXML-HTML
+	url = https://github.com/graetzer/GDataXML-HTML.git
