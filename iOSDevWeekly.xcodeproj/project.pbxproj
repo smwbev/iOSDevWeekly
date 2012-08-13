@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6329C615D7AE8D003F0D88 /* NSString+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6329C515D7AE8D003F0D88 /* NSString+COGUAdditions.m */; };
 		3B6B738F15D27FC3006FF3F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B738E15D27FC3006FF3F3 /* UIKit.framework */; };
 		3B6B739115D27FC3006FF3F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B739015D27FC3006FF3F3 /* Foundation.framework */; };
 		3B6B739315D27FC3006FF3F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B739215D27FC3006FF3F3 /* CoreGraphics.framework */; };
@@ -21,9 +22,6 @@
 		3B6B73B715D27FC3006FF3F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B73B515D27FC3006FF3F3 /* InfoPlist.strings */; };
 		3B6B73BA15D27FC3006FF3F3 /* iOSDevWeeklyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73B915D27FC3006FF3F3 /* iOSDevWeeklyTests.m */; };
 		3B6B73C515D2858D006FF3F3 /* news.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73C315D2858D006FF3F3 /* news.xcdatamodeld */; };
-		3B6B73D815D28BA0006FF3F3 /* COGUDevWeeklyIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73D715D28BA0006FF3F3 /* COGUDevWeeklyIssue.m */; };
-		3B6B73DB15D28BA1006FF3F3 /* COGUDevWeeklyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73DA15D28BA1006FF3F3 /* COGUDevWeeklyCategory.m */; };
-		3B6B73DE15D28BA1006FF3F3 /* COGUDevWeeklyNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73DD15D28BA1006FF3F3 /* COGUDevWeeklyNews.m */; };
 		3B6B73E115D28D45006FF3F3 /* COGUDevWeeklyNewsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B73E015D28D45006FF3F3 /* COGUDevWeeklyNewsManager.m */; };
 		3B6CD5FB15D2A3BA001EDACB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD5B515D2A3BA001EDACB /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-selector"; }; };
 		3B6CD5FC15D2A3BA001EDACB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CD5B715D2A3BA001EDACB /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-implicit-atomic-properties -Wno-gnu"; }; };
@@ -40,10 +38,14 @@
 		3B6CD63315D2A561001EDACB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6CD63215D2A561001EDACB /* CoreData.framework */; };
 		3B834EC715D50704006724FB /* NSArray+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */; };
 		3B834ECB15D51247006724FB /* NSMutableArray+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */; };
+		3B834ED715D533BA006724FB /* UIApplication+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834ED615D533B9006724FB /* UIApplication+COGUAdditions.m */; };
+		3BAF958115D5529400338C91 /* COGUDevWeeklyNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF958015D5529400338C91 /* COGUDevWeeklyNewsItem.m */; };
+		3BAF958515D5529400338C91 /* COGUDevWeeklyIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF958415D5529400338C91 /* COGUDevWeeklyIssue.m */; };
+		3BAF958815D5529400338C91 /* COGUDevWeeklyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF958715D5529400338C91 /* COGUDevWeeklyCategory.m */; };
 		3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion"; }; };
 		3BE20DD015D2C186003D3D4B /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BE20DC015D2C186003D3D4B /* README.markdown */; };
 		3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE20DD515D2C380003D3D4B /* libxml2.dylib */; };
-		3BE20DDE15D3C5DE003D3D4B /* NSObject+COGUBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUBlocks.m */; };
+		3BE20DDE15D3C5DE003D3D4B /* NSObject+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B6329C415D7AE8D003F0D88 /* NSString+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+COGUAdditions.h"; sourceTree = "<group>"; };
+		3B6329C515D7AE8D003F0D88 /* NSString+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+COGUAdditions.m"; sourceTree = "<group>"; };
 		3B6B738A15D27FC3006FF3F3 /* iOSDevWeekly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDevWeekly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6B738E15D27FC3006FF3F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B6B739015D27FC3006FF3F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,12 +81,6 @@
 		3B6B73B815D27FC3006FF3F3 /* iOSDevWeeklyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSDevWeeklyTests.h; sourceTree = "<group>"; };
 		3B6B73B915D27FC3006FF3F3 /* iOSDevWeeklyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDevWeeklyTests.m; sourceTree = "<group>"; };
 		3B6B73C415D2858D006FF3F3 /* news.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = news.xcdatamodel; sourceTree = "<group>"; };
-		3B6B73D615D28BA0006FF3F3 /* COGUDevWeeklyIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyIssue.h; sourceTree = "<group>"; };
-		3B6B73D715D28BA0006FF3F3 /* COGUDevWeeklyIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyIssue.m; sourceTree = "<group>"; };
-		3B6B73D915D28BA1006FF3F3 /* COGUDevWeeklyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyCategory.h; sourceTree = "<group>"; };
-		3B6B73DA15D28BA1006FF3F3 /* COGUDevWeeklyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyCategory.m; sourceTree = "<group>"; };
-		3B6B73DC15D28BA1006FF3F3 /* COGUDevWeeklyNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyNews.h; sourceTree = "<group>"; };
-		3B6B73DD15D28BA1006FF3F3 /* COGUDevWeeklyNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyNews.m; sourceTree = "<group>"; };
 		3B6B73DF15D28D45006FF3F3 /* COGUDevWeeklyNewsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyNewsManager.h; sourceTree = "<group>"; };
 		3B6B73E015D28D45006FF3F3 /* COGUDevWeeklyNewsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyNewsManager.m; sourceTree = "<group>"; };
 		3B6CD5B415D2A3BA001EDACB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
@@ -113,12 +111,20 @@
 		3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+COGUAdditions.m"; sourceTree = "<group>"; };
 		3B834EC915D51247006724FB /* NSMutableArray+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+COGUAdditions.h"; sourceTree = "<group>"; };
 		3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+COGUAdditions.m"; sourceTree = "<group>"; };
+		3B834ED515D533B9006724FB /* UIApplication+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+COGUAdditions.h"; sourceTree = "<group>"; };
+		3B834ED615D533B9006724FB /* UIApplication+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+COGUAdditions.m"; sourceTree = "<group>"; };
+		3BAF957F15D5529400338C91 /* COGUDevWeeklyNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyNewsItem.h; sourceTree = "<group>"; };
+		3BAF958015D5529400338C91 /* COGUDevWeeklyNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyNewsItem.m; sourceTree = "<group>"; };
+		3BAF958315D5529400338C91 /* COGUDevWeeklyIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyIssue.h; sourceTree = "<group>"; };
+		3BAF958415D5529400338C91 /* COGUDevWeeklyIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyIssue.m; sourceTree = "<group>"; };
+		3BAF958615D5529400338C91 /* COGUDevWeeklyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyCategory.h; sourceTree = "<group>"; };
+		3BAF958715D5529400338C91 /* COGUDevWeeklyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyCategory.m; sourceTree = "<group>"; };
 		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
 		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
 		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		3BE20DD515D2C380003D3D4B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+COGUBlocks.h"; sourceTree = "<group>"; };
-		3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+COGUBlocks.m"; sourceTree = "<group>"; };
+		3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+COGUAdditions.h"; sourceTree = "<group>"; };
+		3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+COGUAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,12 +237,12 @@
 			isa = PBXGroup;
 			children = (
 				3B6B73C315D2858D006FF3F3 /* news.xcdatamodeld */,
-				3B6B73DC15D28BA1006FF3F3 /* COGUDevWeeklyNews.h */,
-				3B6B73DD15D28BA1006FF3F3 /* COGUDevWeeklyNews.m */,
-				3B6B73D915D28BA1006FF3F3 /* COGUDevWeeklyCategory.h */,
-				3B6B73DA15D28BA1006FF3F3 /* COGUDevWeeklyCategory.m */,
-				3B6B73D615D28BA0006FF3F3 /* COGUDevWeeklyIssue.h */,
-				3B6B73D715D28BA0006FF3F3 /* COGUDevWeeklyIssue.m */,
+				3BAF958615D5529400338C91 /* COGUDevWeeklyCategory.h */,
+				3BAF958715D5529400338C91 /* COGUDevWeeklyCategory.m */,
+				3BAF958315D5529400338C91 /* COGUDevWeeklyIssue.h */,
+				3BAF958415D5529400338C91 /* COGUDevWeeklyIssue.m */,
+				3BAF957F15D5529400338C91 /* COGUDevWeeklyNewsItem.h */,
+				3BAF958015D5529400338C91 /* COGUDevWeeklyNewsItem.m */,
 			);
 			name = ManagedObjects;
 			sourceTree = "<group>";
@@ -295,10 +301,14 @@
 			children = (
 				3B834EC515D50704006724FB /* NSArray+COGUAdditions.h */,
 				3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */,
-				3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUBlocks.h */,
-				3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUBlocks.m */,
+				3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUAdditions.h */,
+				3BE20DDD15D3C5DE003D3D4B /* NSObject+COGUAdditions.m */,
 				3B834EC915D51247006724FB /* NSMutableArray+COGUAdditions.h */,
 				3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */,
+				3B834ED515D533B9006724FB /* UIApplication+COGUAdditions.h */,
+				3B834ED615D533B9006724FB /* UIApplication+COGUAdditions.m */,
+				3B6329C415D7AE8D003F0D88 /* NSString+COGUAdditions.h */,
+				3B6329C515D7AE8D003F0D88 /* NSString+COGUAdditions.m */,
 			);
 			name = iOSCategories;
 			sourceTree = "<group>";
@@ -418,9 +428,6 @@
 				3B6B739F15D27FC3006FF3F3 /* COGUAppDelegate.m in Sources */,
 				3B6B73A215D27FC3006FF3F3 /* COGUNewsViewController.m in Sources */,
 				3B6B73C515D2858D006FF3F3 /* news.xcdatamodeld in Sources */,
-				3B6B73D815D28BA0006FF3F3 /* COGUDevWeeklyIssue.m in Sources */,
-				3B6B73DB15D28BA1006FF3F3 /* COGUDevWeeklyCategory.m in Sources */,
-				3B6B73DE15D28BA1006FF3F3 /* COGUDevWeeklyNews.m in Sources */,
 				3B6B73E115D28D45006FF3F3 /* COGUDevWeeklyNewsManager.m in Sources */,
 				3B6CD5FB15D2A3BA001EDACB /* AFHTTPClient.m in Sources */,
 				3B6CD5FC15D2A3BA001EDACB /* AFHTTPRequestOperation.m in Sources */,
@@ -433,9 +440,14 @@
 				3B6CD60315D2A3BA001EDACB /* AFXMLRequestOperation.m in Sources */,
 				3B6CD60415D2A3BA001EDACB /* UIImageView+AFNetworking.m in Sources */,
 				3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */,
-				3BE20DDE15D3C5DE003D3D4B /* NSObject+COGUBlocks.m in Sources */,
+				3BE20DDE15D3C5DE003D3D4B /* NSObject+COGUAdditions.m in Sources */,
 				3B834EC715D50704006724FB /* NSArray+COGUAdditions.m in Sources */,
 				3B834ECB15D51247006724FB /* NSMutableArray+COGUAdditions.m in Sources */,
+				3B834ED715D533BA006724FB /* UIApplication+COGUAdditions.m in Sources */,
+				3BAF958115D5529400338C91 /* COGUDevWeeklyNewsItem.m in Sources */,
+				3BAF958515D5529400338C91 /* COGUDevWeeklyIssue.m in Sources */,
+				3BAF958815D5529400338C91 /* COGUDevWeeklyCategory.m in Sources */,
+				3B6329C615D7AE8D003F0D88 /* NSString+COGUAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

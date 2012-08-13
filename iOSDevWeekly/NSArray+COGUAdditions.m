@@ -48,4 +48,18 @@
     return [NSArray arrayWithArray:mappedArray];
 }
 
+
+- (id)cogu_firstObject;
+{
+    return self.count == 0 ? nil : [self objectAtIndex:0];
+}
+
+
+#if !defined(__IPHONE_6_0) || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+- (id)objectAtIndexedSubscript:(NSUInteger)idx;
+{
+    return [self objectAtIndex:idx];
+}
+#endif
+
 @end

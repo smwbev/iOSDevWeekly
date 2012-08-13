@@ -1,13 +1,13 @@
 //
-//  NSObject+COGUBlocks.m
+//  NSObject+COGUAdditions
 //  iOSDevWeekly
 //
 //  Created by Colin Günther on 09.08.12.
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
-#import "NSObject+COGUBlocks.h"
+#import "NSObject+COGUAdditions.h"
 
-@implementation NSObject (COGUBlocks)
+@implementation NSObject (COGUAdditions)
 
 @end

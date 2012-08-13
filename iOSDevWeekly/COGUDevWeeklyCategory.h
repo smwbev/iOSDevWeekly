@@ -2,32 +2,32 @@
 //  COGUDevWeeklyCategory.h
 //  iOSDevWeekly
 //
-//  Created by Colin Günther on 08.08.12.
+//  Created by Colin Günther on 10.08.12.
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class COGUDevWeeklyNews;
+@class COGUDevWeeklyNewsItem;
 
 @interface COGUDevWeeklyCategory : NSManagedObject
 
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * userReadableName;
-@property (nonatomic, retain) NSOrderedSet *news;
+@property (nonatomic, retain) NSOrderedSet *newsItems;
 @end
 
 @interface COGUDevWeeklyCategory (CoreDataGeneratedAccessors)
 
-- (void)insertObject:(COGUDevWeeklyNews *)value inNewsAtIndex:(NSUInteger)idx;
-- (void)removeObjectFromNewsAtIndex:(NSUInteger)idx;
-- (void)insertNews:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
-- (void)removeNewsAtIndexes:(NSIndexSet *)indexes;
-- (void)replaceObjectInNewsAtIndex:(NSUInteger)idx withObject:(COGUDevWeeklyNews *)value;
-- (void)replaceNewsAtIndexes:(NSIndexSet *)indexes withNews:(NSArray *)values;
-- (void)addNewsObject:(COGUDevWeeklyNews *)value;
-- (void)removeNewsObject:(COGUDevWeeklyNews *)value;
-- (void)addNews:(NSOrderedSet *)values;
-- (void)removeNews:(NSOrderedSet *)values;
+- (void)insertObject:(COGUDevWeeklyNewsItem *)value inNewsItemsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromNewsItemsAtIndex:(NSUInteger)idx;
+- (void)insertNewsItems:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeNewsItemsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInNewsItemsAtIndex:(NSUInteger)idx withObject:(COGUDevWeeklyNewsItem *)value;
+- (void)replaceNewsItemsAtIndexes:(NSIndexSet *)indexes withNewsItems:(NSArray *)values;
+- (void)addNewsItemsObject:(COGUDevWeeklyNewsItem *)value;
+- (void)removeNewsItemsObject:(COGUDevWeeklyNewsItem *)value;
+- (void)addNewsItems:(NSOrderedSet *)values;
+- (void)removeNewsItems:(NSOrderedSet *)values;
 @end

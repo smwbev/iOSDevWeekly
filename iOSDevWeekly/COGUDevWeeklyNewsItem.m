@@ -1,22 +1,22 @@
 //
-//  COGUDevWeeklyNews.m
+//  COGUDevWeeklyNewsItem.m
 //  iOSDevWeekly
 //
-//  Created by Colin Günther on 08.08.12.
+//  Created by Colin Günther on 10.08.12.
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
-#import "COGUDevWeeklyNews.h"
+#import "COGUDevWeeklyNewsItem.h"
 #import "COGUDevWeeklyCategory.h"
 #import "COGUDevWeeklyIssue.h"
 
 
-@implementation COGUDevWeeklyNews
+@implementation COGUDevWeeklyNewsItem
 
-@dynamic title;
-@dynamic explanation;
 @dynamic completeTextUrl;
-@dynamic issue;
+@dynamic explanation;
+@dynamic title;
 @dynamic category;
+@dynamic issue;
 
 @end

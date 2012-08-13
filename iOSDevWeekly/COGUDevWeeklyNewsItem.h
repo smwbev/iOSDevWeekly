@@ -1,8 +1,8 @@
 //
-//  COGUDevWeeklyNews.h
+//  COGUDevWeeklyNewsItem.h
 //  iOSDevWeekly
 //
-//  Created by Colin Günther on 08.08.12.
+//  Created by Colin Günther on 10.08.12.
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
@@ -11,12 +11,12 @@
 
 @class COGUDevWeeklyCategory, COGUDevWeeklyIssue;
 
-@interface COGUDevWeeklyNews : NSManagedObject
+@interface COGUDevWeeklyNewsItem : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * explanation;
 @property (nonatomic, retain) NSString * completeTextUrl;
-@property (nonatomic, retain) COGUDevWeeklyIssue *issue;
+@property (nonatomic, retain) NSString * explanation;
+@property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) COGUDevWeeklyCategory *category;
+@property (nonatomic, retain) COGUDevWeeklyIssue *issue;
 
 @end

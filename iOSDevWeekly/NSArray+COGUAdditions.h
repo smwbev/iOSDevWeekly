@@ -59,4 +59,16 @@
  */
 - (NSArray*)cogu_mappedArrayUsingBlock:(id (^)(id obj, NSUInteger idx, BOOL *stop))mapper;
 
+
+/*!
+ @brief Returns the object in the array with the lowest index value.
+ @return The object with the lowest index value. If the array is empty, returns nil.
+*/
+- (id)cogu_firstObject;
+
+
+#if !defined(__IPHONE_6_0) || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+- (id)objectAtIndexedSubscript:(NSUInteger)idx;
+#endif
+
 @end
