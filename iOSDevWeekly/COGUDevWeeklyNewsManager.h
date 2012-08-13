@@ -64,6 +64,24 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
 
 
 /*!
+ @brief Adds issues to the database and persists them afterwards.
+ @discussion After adding the issues to the database you don't need to perform a database sync as it is part of this method already.
+ @param issueDocuments Array of issue documents of type GDataXMLDocument that will be added to the database. Must not be nil.
+ @param error If an error occurs, upon return contains an NSError object that describes the problem. Pass nil if you aren't interested in error information.
+ @return YES if the issues were added, otherwise NO.
+ */
+- (BOOL)addIssuesToDatabaseAndPersists:(NSArray*)issueDocuments error:(NSError**)error;
+
+
+/*!
+ @brief Syncs all entities to disc.
+ @param error If an error occurs, upon return contains an NSError object that describes the problem. Pass nil if you aren't interested in error information.
+ @return YES if persisting succeeded, otherwise NO.
+*/
+- (BOOL)persistDatabaseError:(NSError**)error;
+
+
+/*!
  @brief Only fetches the latest issue asynchronously.
  @discussion The database won't be touched after fetching did succeed.
  @param success Executed after successfully fetching the latest issue. The context object is nil always. @see COGUDevWeeklyNewsManagerSuccessHandler

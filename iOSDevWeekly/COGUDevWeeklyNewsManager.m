@@ -24,8 +24,9 @@
 
 
 static NSString* const kDevWeeklyBaseURLString = @"http://iosdevweekly.com";
-static NSString* const kDevWeeklyIssuesRemotePath = @"/issues";
 static NSString* const kDevWeeklyDatabaseFilename = @"news.sqlite";
+
+static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 
 
 @implementation COGUDevWeeklyNewsManager
@@ -83,7 +84,7 @@ static NSString* const kDevWeeklyDatabaseFilename = @"news.sqlite";
         NSBlockCallSafely(failure, error);
     }];
 
-    return kDevWeeklyIssuesRemotePath;
+    return kAllIssuesFetcher;
 }
 
 
@@ -96,7 +97,42 @@ static NSString* const kDevWeeklyDatabaseFilename = @"news.sqlite";
         return NO;
 
     BOOL configuredIssueSuccessfully = [self _configureIssueEntity:issueEntity withIssue:issueDocument error:error];
+
+    if (configuredIssueSuccessfully)
+        NSDereferenceAndAssignSafely(error, nil);
+
+
     return configuredIssueSuccessfully;
+}
+
+
+- (BOOL)addIssuesToDatabaseAndPersists:(NSArray*)issueDocuments error:(NSError**)error;
+{
+    NSAssert(issueDocuments != nil, nil);
+    static BOOL const kAddingToDatabaseFailed = NO;
+    __block BOOL addingToDatabaseSucceeded = kAddingToDatabaseFailed;
+    [issueDocuments enumerateObjectsUsingBlock:^(GDataXMLDocument* issueDocument, NSUInteger idx, BOOL *stop) {
+        NSAssert([issueDocument isMemberOfClass:[GDataXMLDocument class]], nil);
+        addingToDatabaseSucceeded = [self addIssueToDatabase:issueDocument error:error];
+        *stop = !addingToDatabaseSucceeded;
+    }];
+
+    if (!addingToDatabaseSucceeded)
+        return kAddingToDatabaseFailed;
+
+    addingToDatabaseSucceeded = [self persistDatabaseError:error];
+
+    if (!addingToDatabaseSucceeded)
+        return kAddingToDatabaseFailed;
+
+    NSDereferenceAndAssignSafely(error, nil);
+    return addingToDatabaseSucceeded;
+}
+
+
+- (BOOL)persistDatabaseError:(NSError**)error;
+{
+    return [self.devWeeklyManagedObjectContext save:error];
 }
 
 
