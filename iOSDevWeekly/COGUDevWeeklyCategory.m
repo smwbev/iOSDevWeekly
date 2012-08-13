@@ -2,7 +2,7 @@
 //  COGUDevWeeklyCategory.m
 //  iOSDevWeekly
 //
-//  Created by Colin Günther on 10.08.12.
+//  Created by Colin Günther on 13.08.12.
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 

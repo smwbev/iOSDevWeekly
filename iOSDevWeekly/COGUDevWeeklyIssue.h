@@ -2,7 +2,7 @@
 //  COGUDevWeeklyIssue.h
 //  iOSDevWeekly
 //
-//  Created by Colin Günther on 10.08.12.
+//  Created by Colin Günther on 13.08.12.
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSNumber * number;
 @property (nonatomic, retain) NSDate * publishingDate;
 @property (nonatomic, retain) NSString * userReadableName;
+@property (nonatomic, retain) NSString * specifics;
 @property (nonatomic, retain) NSOrderedSet *newsItems;
 @end
 

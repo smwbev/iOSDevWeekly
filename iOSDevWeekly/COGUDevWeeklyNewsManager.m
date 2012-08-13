@@ -39,6 +39,30 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 @synthesize devWeeklyPublishingDateFormatter = _devWeeklyPublishingDateFormatter;
 
 
+- (void)prefillIssuesDatabaseIfEmptySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+{
+    __block NSError* prefillingError = nil;
+    NSNumber* numberOfIssues = [self numberOfIssuesInDatabaseError:&prefillingError];
+    if (numberOfIssues == nil)
+        return failure(prefillingError);
+
+    if (numberOfIssues.integerValue > 0)
+        return success(numberOfIssues);
+
+    [self fetchAllIssuesSuccessHandler:^(NSArray* issueDocuments) {
+        prefillingError = nil;
+        BOOL addingToDatabaseSucceeded = [self addIssuesToDatabaseAndPersists:issueDocuments error:&prefillingError];
+        if (addingToDatabaseSucceeded)
+            success(@(issueDocuments.count));
+        else
+            failure(prefillingError);
+
+    } failureHandler:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+
 - (NSNumber*)numberOfIssuesInDatabaseError:(NSError**)error;
 {
     NSFetchRequest* fetchIssuesCountRequest = [[self.devWeeklyManagedObjectModel fetchRequestFromTemplateWithName:@"fetchIssuesCountRequest" substitutionVariables:nil] copy];
@@ -114,7 +138,6 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 
     if (configuredIssueSuccessfully)
         NSDereferenceAndAssignSafely(error, nil);
-
 
     return configuredIssueSuccessfully;
 }
@@ -329,12 +352,14 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
     if (issuePublishingDate == nil)
         return nil;
 
-    NSDereferenceAndAssignSafely(error, nil);
-
     issueEntity = [NSEntityDescription insertNewObjectForEntityForName:@"Issue" inManagedObjectContext:self.devWeeklyManagedObjectContext];
 
+    issueEntity.specifics = [self _specificsOfIssue:issue error:nil];
+    issueEntity.userReadableName = [self _userReadableNameOfIssue:issue error:nil];
     issueEntity.number = issueNumber;
     issueEntity.publishingDate = issuePublishingDate;
+
+    NSDereferenceAndAssignSafely(error, nil);
 
     return issueEntity;
 }
@@ -342,13 +367,19 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 
 - (BOOL)_configureIssueEntity:(COGUDevWeeklyIssue*)issueEntity withIssue:(GDataXMLDocument*)issue error:(NSError**)error;
 {
+    static BOOL const kConfiguringCategoryEntitiesSucceeded = YES;
     static BOOL const kConfiguringCategoryEntitiesFailed = NO;
     __block BOOL configuringCategoryEntitiesSucceeded = kConfiguringCategoryEntitiesFailed;
 
     NSArray* issueCategoryElements = [self _categoryElementsInIssue:issue error:error];
-    if (issueCategoryElements.count == 0)
+    if (issueCategoryElements == nil)
         return kConfiguringCategoryEntitiesFailed;
-    
+
+    NSDereferenceAndAssignSafely(error, nil);
+
+    if (issueCategoryElements.count == 0)
+        return kConfiguringCategoryEntitiesSucceeded;
+
     [issueCategoryElements enumerateObjectsUsingBlock:^(GDataXMLElement* issueCategoryElement, NSUInteger idx, BOOL *stop) {
         COGUDevWeeklyCategory* issueCategoryEntity = [self _fetchOrCreateCategoryEntityForCategory:issueCategoryElement error:error];
         if (issueCategoryEntity == nil)
@@ -366,15 +397,16 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 - (NSArray*)_categoryElementsInIssue:(GDataXMLDocument*)issue error:(NSError**)error;
 {
     NSArray* categoryElementCandidates = [issue nodesForXPath:@"//h3" error:error];
-    if (categoryElementCandidates.count == 0)
-        return nil;
-
-    NSRange rangeContainingCategoryElementsOnly = NSMakeRange(0, categoryElementCandidates.count - 1);
-    NSArray* categoryElements = [categoryElementCandidates subarrayWithRange:rangeContainingCategoryElementsOnly];
-    if (categoryElements.count == 0)
+    if (categoryElementCandidates == nil)
         return nil;
 
     NSDereferenceAndAssignSafely(error, nil);
+
+    if (categoryElementCandidates.count == 0)
+        return [NSArray array];
+
+    NSRange rangeContainingCategoryElementsOnly = NSMakeRange(0, categoryElementCandidates.count - 1);
+    NSArray* categoryElements = [categoryElementCandidates subarrayWithRange:rangeContainingCategoryElementsOnly];
 
     return categoryElements;
 }
@@ -499,6 +531,8 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
     if (issueHeaderTwo == nil)
         return nil;
 
+    NSDereferenceAndAssignSafely(error, nil);
+
     NSArray* issueHeaderTwoComponents = [issueHeaderTwo.stringValue componentsSeparatedByString:@" - "];
     if (issueHeaderTwoComponents.count < 2)
         return nil;
@@ -519,6 +553,8 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
     if (issueHeaderTwo == nil)
         return nil;
 
+    NSDereferenceAndAssignSafely(error, nil);
+
     NSArray* issueHeaderTwoComponents = [issueHeaderTwo.stringValue componentsSeparatedByString:@" - "];
     if (issueHeaderTwoComponents.count < 2)
         return nil;
@@ -533,9 +569,44 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
         *stop = issuePublishingDate != nil;
     }];
 
+    return issuePublishingDate;
+}
+
+
+- (NSString*)_specificsOfIssue:(GDataXMLDocument*)issue error:(NSError**)error;
+{
+    GDataXMLElement* issueHeaderTwo = (GDataXMLElement*)[issue firstNodeForXPath:@"//h2" error:error];
+    if (issueHeaderTwo == nil)
+        return nil;
+
+    GDataXMLElement* siblingElement = (GDataXMLElement*)[issueHeaderTwo firstNodeForXPath:@"following-sibling::*" error:error];
+    if (siblingElement == nil)
+        return nil;
+
     NSDereferenceAndAssignSafely(error, nil);
 
-    return issuePublishingDate;
+    if (![siblingElement.name isEqualToString:@"p"])
+        return @"";
+
+    NSString* issueSpecifics = siblingElement.stringValue;
+    return issueSpecifics;
+}
+
+
+- (NSString*)_userReadableNameOfIssue:(GDataXMLDocument*)issue error:(NSError**)error;
+{
+    GDataXMLElement* issueHeaderTwo = (GDataXMLElement*)[issue firstNodeForXPath:@"//h2" error:error];
+    if (issueHeaderTwo == nil)
+        return nil;
+
+    NSDereferenceAndAssignSafely(error, nil);
+
+    NSArray* issueHeaderTwoComponents = [issueHeaderTwo.stringValue componentsSeparatedByString:@" - "];
+    if (issueHeaderTwoComponents.count < 2)
+        return nil;
+
+    NSString* issueUserReadableName = issueHeaderTwoComponents[0];
+    return issueUserReadableName;
 }
 
 

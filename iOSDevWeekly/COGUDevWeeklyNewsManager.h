@@ -43,6 +43,17 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
 
 
 /*!
+ @brief Fetches and adds all dev weekly issues to the database.
+ @discussion Prefilling will happen only when there are no issues in the database yet. After successfully prefilling the database all issues are going to be persisted, too.
+ @param success Executed after successfully prefilling the database.
+ The context object is of type NSNumber and contains the count of issues that were fetched and added. The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler.
+
+ @param failure Executed after prefilling the database failed. All changes that to the databse are rolled back to the state before starting the prefill operation. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
+*/
+- (void)prefillIssuesDatabaseIfEmptySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+
+
+/*!
  @brief Returns the number of issues currently in the database.
  @param error If an error occurs, upon return contains an NSError object that describes the problem. Pass nil if you aren't interested in error information.
  @return Number of issues in database or nil if there was an error.
@@ -231,6 +242,20 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
  @return Object if extraction succeeded. Nil, otherwise.
 */
 - (NSDate*)_publishingDateOfIssue:(GDataXMLDocument*)issue error:(NSError**)error;
+
+
+/**
+ @brief Extracts any specifics of the passed issue HTML document.
+ @return Object if extraction succeeded. Nil, otherwise.
+ */
+- (NSString*)_specificsOfIssue:(GDataXMLDocument*)issue error:(NSError**)error;
+
+
+/**
+ @brief Extracts the user readable name of the passed issue HTML document.
+ @return Object if extraction succeeded. Nil, otherwise.
+ */
+- (NSString*)_userReadableNameOfIssue:(GDataXMLDocument*)issue error:(NSError**)error;
 
 
 /**

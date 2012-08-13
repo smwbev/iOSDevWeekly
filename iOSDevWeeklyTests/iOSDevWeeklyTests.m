@@ -79,4 +79,28 @@
     dispatch_release(testCompleted);
 }
 
+
+- (void)testPrefillingDatabase;
+{
+    dispatch_semaphore_t testCompleted = dispatch_semaphore_create(0);
+
+    [self.newsManager prefillIssuesDatabaseIfEmptySuccessHandler:^(NSNumber* issuesCount) {
+        STAssertNotNil(issuesCount, nil);        
+        NSError* countingError = nil;
+        NSNumber* numberOfIssuesInDatabase = [self.newsManager numberOfIssuesInDatabaseError:&countingError];
+        STAssertEqualObjects(numberOfIssuesInDatabase, issuesCount, nil);
+        STAssertNil(countingError, @"Failed to count the issues in the database (error: %@)", countingError);
+        dispatch_semaphore_signal(testCompleted);
+    } failureHandler:^(NSError *error) {
+        STFail(@"Failed to prefill database (error: %@)", error);
+        dispatch_semaphore_signal(testCompleted);
+    }];
+
+    while (dispatch_semaphore_wait(testCompleted, DISPATCH_TIME_NOW)) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:10]];
+    }
+
+    dispatch_release(testCompleted);
+}
+
 @end
