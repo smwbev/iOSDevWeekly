@@ -62,6 +62,10 @@
         BOOL addingToDatabaseSucceeded = [self.newsManager addIssueToDatabase:arbitraryIssue error:&addingIssueError];
         STAssertTrue(addingToDatabaseSucceeded, nil);
         STAssertNil(addingIssueError, @"Failed to add arbitrary issue to database (error: %@)", addingIssueError);
+        NSError* countingError = nil;
+        NSNumber* numberOfIssuesInDatabase = [self.newsManager numberOfIssuesInDatabaseError:&countingError];
+        STAssertEqualObjects(numberOfIssuesInDatabase, @1, nil);
+        STAssertNil(countingError, @"Failed to count the issues in the database (error: %@)", countingError);
         dispatch_semaphore_signal(testCompleted);
     } failureHandler:^(NSError *error) {
         STFail(@"Failed to fetch all issues (error: %@)", error);

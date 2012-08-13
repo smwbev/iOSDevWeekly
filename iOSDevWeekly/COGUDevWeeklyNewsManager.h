@@ -41,6 +41,15 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
 
 @interface COGUDevWeeklyNewsManager : NSObject
 
+
+/*!
+ @brief Returns the number of issues currently in the database.
+ @param error If an error occurs, upon return contains an NSError object that describes the problem. Pass nil if you aren't interested in error information.
+ @return Number of issues in database or nil if there was an error.
+*/
+- (NSNumber*)numberOfIssuesInDatabaseError:(NSError**)error;
+
+
 /*!
  @brief Fetches all issues that were published so far asynchronously.
  @discussion The database won't be touched after fetching did succeed.

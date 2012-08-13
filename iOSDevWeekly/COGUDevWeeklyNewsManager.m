@@ -39,6 +39,20 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 @synthesize devWeeklyPublishingDateFormatter = _devWeeklyPublishingDateFormatter;
 
 
+- (NSNumber*)numberOfIssuesInDatabaseError:(NSError**)error;
+{
+    NSFetchRequest* fetchIssuesCountRequest = [[self.devWeeklyManagedObjectModel fetchRequestFromTemplateWithName:@"fetchIssuesCountRequest" substitutionVariables:nil] copy];
+
+    NSUInteger issuesCount = [self.devWeeklyManagedObjectContext countForFetchRequest:fetchIssuesCountRequest error:error];
+
+    if (issuesCount == NSNotFound)
+        return nil;
+
+    NSDereferenceAndAssignSafely(error, nil);
+    return @(issuesCount);
+}
+
+
 - (id)fetchAllIssuesSuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
 {
     [self _fetchLandingPageSuccessHandler:^(GDataXMLDocument* landingPage) {

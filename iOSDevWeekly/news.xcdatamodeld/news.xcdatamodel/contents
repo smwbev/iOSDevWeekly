@@ -20,9 +20,10 @@
     </entity>
     <fetchRequest name="fetchCategoryRequest" entity="Category" predicateString="type == &quot;$TYPE&quot;"/>
     <fetchRequest name="fetchIssueRequest" entity="Issue" predicateString="number == 0"/>
+    <fetchRequest name="fetchIssuesCountRequest" entity="Issue" returnObjectsAsFaults="YES"/>
     <elements>
-        <element name="Category" positionX="153" positionY="9" width="128" height="84"/>
-        <element name="Issue" positionX="-261" positionY="-9" width="128" height="99"/>
-        <element name="NewsItem" positionX="-63" positionY="-18" width="128" height="114"/>
+        <element name="Category" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Issue" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="NewsItem" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
