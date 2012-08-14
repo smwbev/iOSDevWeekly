@@ -6,7 +6,9 @@
 //  Copyright (c) 2012 Cogun. All rights reserved.
 //
 
+
 #import "COGUNibTableCell.h"
+
 
 @interface COGUNewsItemCell : COGUNibTableCell
 
