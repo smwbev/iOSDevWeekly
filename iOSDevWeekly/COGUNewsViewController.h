@@ -7,11 +7,23 @@
 //
 
 
+#import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
+
+
+@class COGUDevWeeklyNewsManager;
 
 
 @interface COGUNewsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>;
 
 @property (weak, nonatomic) IBOutlet UITableView *newsListingControl;
+
+@end
+
+
+@interface COGUNewsViewController ()
+
+@property (strong, nonatomic) COGUDevWeeklyNewsManager* newsManager;
+@property (strong, nonatomic) NSFetchedResultsController* fetchedNewsResultsController;
 
 @end
