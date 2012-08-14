@@ -69,7 +69,7 @@
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
 {
     id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedNewsResultsController.sections[(NSUInteger)section];
-    NSString* sectionName = [sectionInfo name];
+    NSString* sectionName = [[sectionInfo objects].cogu_firstObject category].userReadableName;
     return sectionName;
 }
 
