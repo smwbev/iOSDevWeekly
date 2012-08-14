@@ -142,12 +142,30 @@
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
+							<object class="IBUIImageView" id="330893829">
+								<reference key="NSNextResponder" ref="417326789"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{10, 76}, {6, 5}}</string>
+								<reference key="NSSuperview" ref="417326789"/>
+								<reference key="NSNextKeyView"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">completeIssueIcon.png</string>
+								</object>
+								<object class="NSCustomResource" key="IBUIHighlightedImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">completeIssueIconSelected.png</string>
+								</object>
+							</object>
 							<object class="IBUILabel" id="565616531">
 								<reference key="NSNextResponder" ref="417326789"/>
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{10, 69}, {300, 20}}</string>
 								<reference key="NSSuperview" ref="417326789"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="330893829"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -263,6 +281,7 @@
 							<reference ref="565616531"/>
 							<reference ref="11494711"/>
 							<reference ref="275099007"/>
+							<reference ref="330893829"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -296,6 +315,12 @@
 						<reference key="parent" ref="1005418205"/>
 						<string key="objectName">background</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">12</int>
+						<reference key="object" ref="330893829"/>
+						<reference key="parent" ref="1005418205"/>
+						<string key="objectName">completeIssue</string>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -303,6 +328,7 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.CustomClassName">COGUNewsItemCell</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -314,7 +340,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">11</int>
+			<int key="maxID">12</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
@@ -326,6 +352,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="completeIssueIcon.png">{24, 15}</string>
+			<string key="completeIssueIconSelected.png">{24, 15}</string>
 			<string key="newsItemBackground.png">{1, 69}</string>
 			<string key="newsItemBackgroundSelected.png">{1, 69}</string>
 		</dictionary>
