@@ -15,11 +15,13 @@
 #import "COGUDevWeeklyNewsItem.h"
 #import "COGUDevWeeklyNewsManager.h"
 #import "COGUNewsItemCell.h"
+#import "COGUNewsItemSectionHeaderView.h"
 
 
 @implementation COGUNewsViewController
 
 @synthesize newsListingControl;
+@synthesize newsListingHeaderControl = _newsListingHeaderControl;
 @synthesize fetchedNewsResultsController = _fetchedNewsResultsController;
 @synthesize newsManager = _newsManager;
 
@@ -66,11 +68,21 @@
 }
 
 
-- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    return [COGUNewsItemSectionHeaderView preferredSize].height;
+}
+
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
 {
     id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedNewsResultsController.sections[(NSUInteger)section];
     NSString* sectionName = [[sectionInfo objects].cogu_firstObject category].userReadableName;
-    return sectionName;
+
+    COGUNewsItemSectionHeaderView* view = [COGUNewsItemSectionHeaderView createView];
+    view.titleControl.text = sectionName;
+
+    return view;
 }
 
 
@@ -78,8 +90,7 @@
 
 - (void)viewDidLoad;
 {
-    self.newsListingControl.rowHeight = [COGUNewsItemCell preferredCellHeight];
-
+    [self _configureNewsListingControlAfterViewDidLoad];
     [self.newsManager prefillIssuesDatabaseIfEmptySuccessHandler:^(id context) {
         [self.fetchedNewsResultsController performFetch:nil];
         [self.newsListingControl reloadData];
@@ -94,6 +105,7 @@
     self.newsListingControl = nil;
     self.fetchedNewsResultsController = nil;
 
+    [self setNewsListingHeaderControl:nil];
     [super viewDidUnload];
 }
 
@@ -124,6 +136,19 @@
     _fetchedNewsResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchNewsItemsRequest managedObjectContext:self.newsManager.devWeeklyManagedObjectContext sectionNameKeyPath:@"category.type" cacheName:@"fetchedDevWeeklyNewsResults.cache"];
 
     return _fetchedNewsResultsController;
+}
+
+@end
+
+
+#pragma mark -
+
+@implementation COGUNewsViewController (Private)
+
+- (void)_configureNewsListingControlAfterViewDidLoad;
+{
+    self.newsListingControl.rowHeight = [COGUNewsItemCell preferredCellHeight];
+    self.newsListingControl.tableHeaderView = self.newsListingHeaderControl;
 }
 
 @end

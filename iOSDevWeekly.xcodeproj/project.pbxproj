@@ -53,6 +53,9 @@
 		3B834EC715D50704006724FB /* NSArray+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */; };
 		3B834ECB15D51247006724FB /* NSMutableArray+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */; };
 		3B834ED715D533BA006724FB /* UIApplication+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B834ED615D533B9006724FB /* UIApplication+COGUAdditions.m */; };
+		3BC7AA3515DAABB300B585DF /* COGUNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC7AA3415DAABB300B585DF /* COGUNibView.m */; };
+		3BC7AA3915DAADA400B585DF /* COGUNewsItemSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC7AA3815DAADA400B585DF /* COGUNewsItemSectionHeaderView.m */; };
+		3BC7AA3B15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC7AA3A15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib */; };
 		3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion"; }; };
 		3BE20DD015D2C186003D3D4B /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BE20DC015D2C186003D3D4B /* README.markdown */; };
 		3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE20DD515D2C380003D3D4B /* libxml2.dylib */; };
@@ -143,6 +146,11 @@
 		3B834ECA15D51247006724FB /* NSMutableArray+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+COGUAdditions.m"; sourceTree = "<group>"; };
 		3B834ED515D533B9006724FB /* UIApplication+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+COGUAdditions.h"; sourceTree = "<group>"; };
 		3B834ED615D533B9006724FB /* UIApplication+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+COGUAdditions.m"; sourceTree = "<group>"; };
+		3BC7AA3315DAABB300B585DF /* COGUNibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUNibView.h; sourceTree = "<group>"; };
+		3BC7AA3415DAABB300B585DF /* COGUNibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUNibView.m; sourceTree = "<group>"; };
+		3BC7AA3715DAADA400B585DF /* COGUNewsItemSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUNewsItemSectionHeaderView.h; sourceTree = "<group>"; };
+		3BC7AA3815DAADA400B585DF /* COGUNewsItemSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUNewsItemSectionHeaderView.m; sourceTree = "<group>"; };
+		3BC7AA3A15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COGUNewsItemSectionHeaderView.xib; sourceTree = "<group>"; };
 		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
 		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
 		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
@@ -222,6 +230,9 @@
 				3B4E424D15DA86A700713EF7 /* COGUNewsItemCell.h */,
 				3B4E424E15DA86A700713EF7 /* COGUNewsItemCell.m */,
 				3B4E424815D98E9D00713EF7 /* COGUNewsItemCell.xib */,
+				3BC7AA3715DAADA400B585DF /* COGUNewsItemSectionHeaderView.h */,
+				3BC7AA3815DAADA400B585DF /* COGUNewsItemSectionHeaderView.m */,
+				3BC7AA3A15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib */,
 				3B4E425815DA9A9000713EF7 /* completeIssueIcon.png */,
 				3B4E425915DA9A9000713EF7 /* completeIssueIcon@2x.png */,
 				3B4E425A15DA9A9100713EF7 /* completeIssueIconSelected.png */,
@@ -232,6 +243,8 @@
 				3B4E425515DA95CE00713EF7 /* newsItemBackgroundSelected@2x.png */,
 				3B4E424A15DA82B500713EF7 /* COGUNibTableCell.h */,
 				3B4E424B15DA82B500713EF7 /* COGUNibTableCell.m */,
+				3BC7AA3315DAABB300B585DF /* COGUNibView.h */,
+				3BC7AA3415DAABB300B585DF /* COGUNibView.m */,
 				3BE20DDB15D3C36A003D3D4B /* iOSCategories */,
 				3B6B73CC15D2893C006FF3F3 /* ManagedObjects */,
 				3B6B739515D27FC3006FF3F3 /* Supporting Files */,
@@ -436,6 +449,7 @@
 				3B4E425D15DA9A9100713EF7 /* completeIssueIcon@2x.png in Resources */,
 				3B4E425E15DA9A9100713EF7 /* completeIssueIconSelected.png in Resources */,
 				3B4E425F15DA9A9100713EF7 /* completeIssueIconSelected@2x.png in Resources */,
+				3BC7AA3B15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +510,8 @@
 				3B4E424715D9495F00713EF7 /* COGUDevWeeklyIssue.m in Sources */,
 				3B4E424C15DA82B500713EF7 /* COGUNibTableCell.m in Sources */,
 				3B4E424F15DA86A700713EF7 /* COGUNewsItemCell.m in Sources */,
+				3BC7AA3515DAABB300B585DF /* COGUNibView.m in Sources */,
+				3BC7AA3915DAADA400B585DF /* COGUNewsItemSectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

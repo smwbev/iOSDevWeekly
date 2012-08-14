@@ -17,6 +17,7 @@
 @interface COGUNewsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>;
 
 @property (weak, nonatomic) IBOutlet UITableView *newsListingControl;
+@property (strong, nonatomic) IBOutlet UIView *newsListingHeaderControl;
 
 @end
 
@@ -25,5 +26,12 @@
 
 @property (strong, nonatomic) COGUDevWeeklyNewsManager* newsManager;
 @property (strong, nonatomic) NSFetchedResultsController* fetchedNewsResultsController;
+
+@end
+
+
+@interface COGUNewsViewController (Private)
+
+- (void)_configureNewsListingControlAfterViewDidLoad;
 
 @end
