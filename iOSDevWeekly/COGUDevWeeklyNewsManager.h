@@ -43,6 +43,13 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
 
 
 /*!
+ @brief Provides access to the dev weekly issues
+ @discussion Only access this context on the main queue. For long fetching operations the main thread might be blocked for quiet some time thus leading to an unresponding user interface.
+*/
+@property (strong, nonatomic, readonly) NSManagedObjectContext* devWeeklyManagedObjectContext;
+
+
+/*!
  @brief Fetches and adds all dev weekly issues to the database.
  @discussion Prefilling will happen only when there are no issues in the database yet. After successfully prefilling the database all issues are going to be persisted, too.
  @param success Executed after successfully prefilling the database.
