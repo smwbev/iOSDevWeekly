@@ -73,6 +73,8 @@
 		3BD1449F15DBA7CA005B311B /* libSBLayoutManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD1446B15DBA6A3005B311B /* libSBLayoutManager.a */; };
 		3BD144A315DBDA84005B311B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD144A115DBDA84005B311B /* Default.png */; };
 		3BD144A415DBDA84005B311B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD144A215DBDA84005B311B /* Default@2x.png */; };
+		3BD144A815DBE1E6005B311B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD144A615DBE1E6005B311B /* Icon.png */; };
+		3BD144A915DBE1E6005B311B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD144A715DBE1E6005B311B /* Icon@2x.png */; };
 		3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion"; }; };
 		3BE20DD015D2C186003D3D4B /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BE20DC015D2C186003D3D4B /* README.markdown */; };
 		3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE20DD515D2C380003D3D4B /* libxml2.dylib */; };
@@ -211,6 +213,8 @@
 		3BD144A015DBA834005B311B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = iOSDevWeekly/Vendor/SBLayoutManager/README.md; sourceTree = SOURCE_ROOT; };
 		3BD144A115DBDA84005B311B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3BD144A215DBDA84005B311B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3BD144A615DBE1E6005B311B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3BD144A715DBE1E6005B311B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
 		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
 		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
@@ -446,12 +450,14 @@
 		3BD144A515DBDB37005B311B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3BD144A115DBDA84005B311B /* Default.png */,
-				3BD144A215DBDA84005B311B /* Default@2x.png */,
 				3B4E425815DA9A9000713EF7 /* completeIssueIcon.png */,
 				3B4E425915DA9A9000713EF7 /* completeIssueIcon@2x.png */,
 				3B4E425A15DA9A9100713EF7 /* completeIssueIconSelected.png */,
 				3B4E425B15DA9A9100713EF7 /* completeIssueIconSelected@2x.png */,
+				3BD144A115DBDA84005B311B /* Default.png */,
+				3BD144A215DBDA84005B311B /* Default@2x.png */,
+				3BD144A615DBE1E6005B311B /* Icon.png */,
+				3BD144A715DBE1E6005B311B /* Icon@2x.png */,
 				3B4E425015DA935700713EF7 /* newsItemBackground.png */,
 				3B4E425115DA935700713EF7 /* newsItemBackground@2x.png */,
 				3B4E425415DA95CE00713EF7 /* newsItemBackgroundSelected.png */,
@@ -594,6 +600,8 @@
 				3BC7AA3B15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib in Resources */,
 				3BD144A315DBDA84005B311B /* Default.png in Resources */,
 				3BD144A415DBDA84005B311B /* Default@2x.png in Resources */,
+				3BD144A815DBE1E6005B311B /* Icon.png in Resources */,
+				3BD144A915DBE1E6005B311B /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,7 +873,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBLayoutManager/SBLayoutManager-Prefix.pch";
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -881,7 +888,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBLayoutManager/SBLayoutManager-Prefix.pch";
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
