@@ -1,5 +1,5 @@
 # iOSDevWeekly
-## An iPhone app for searching within the iOS Dev Weekly issues.
+## An iPhone app for reading the iOS Dev Weekly issues.
 
 iOS Dev Weekly is a newsletter digesting the latest news from the iOS (as in iPhone) news space. It is compiled and curated by [Dave Verwer](http://shinydevelopment.com/).
 You can subscribe to the newsletter or browse online through past issues on the [newsletter homepage](http://iosdevweekly.com/)
