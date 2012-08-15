@@ -56,6 +56,21 @@
 		3BC7AA3515DAABB300B585DF /* COGUNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC7AA3415DAABB300B585DF /* COGUNibView.m */; };
 		3BC7AA3915DAADA400B585DF /* COGUNewsItemSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC7AA3815DAADA400B585DF /* COGUNewsItemSectionHeaderView.m */; };
 		3BC7AA3B15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC7AA3A15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib */; };
+		3BD1446C15DBA6A3005B311B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6B739015D27FC3006FF3F3 /* Foundation.framework */; };
+		3BD1449215DBA6DA005B311B /* CGRectHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1447915DBA6DA005B311B /* CGRectHelpers.m */; };
+		3BD1449315DBA6DA005B311B /* SBCenteredConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1447B15DBA6DA005B311B /* SBCenteredConstraint.m */; };
+		3BD1449415DBA6DA005B311B /* SBHorizontalConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1447D15DBA6DA005B311B /* SBHorizontalConstraint.m */; };
+		3BD1449515DBA6DA005B311B /* SBLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1447F15DBA6DA005B311B /* SBLayoutConstraint.m */; };
+		3BD1449615DBA6DA005B311B /* SBLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448115DBA6DA005B311B /* SBLayoutItem.m */; };
+		3BD1449715DBA6DA005B311B /* SBLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448315DBA6DA005B311B /* SBLayoutManager.m */; };
+		3BD1449815DBA6DA005B311B /* SBRemainingSpaceConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448515DBA6DA005B311B /* SBRemainingSpaceConstraint.m */; };
+		3BD1449915DBA6DA005B311B /* SBSupressItemConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448715DBA6DA005B311B /* SBSupressItemConstraint.m */; };
+		3BD1449A15DBA6DA005B311B /* SBVariableContentHeightConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448915DBA6DA005B311B /* SBVariableContentHeightConstraint.m */; };
+		3BD1449B15DBA6DA005B311B /* SBVariableContentSizeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448B15DBA6DA005B311B /* SBVariableContentSizeConstraint.m */; };
+		3BD1449C15DBA6DA005B311B /* SBVariableContentWidthConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448D15DBA6DA005B311B /* SBVariableContentWidthConstraint.m */; };
+		3BD1449D15DBA6DA005B311B /* SBVerticalConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1448F15DBA6DA005B311B /* SBVerticalConstraint.m */; };
+		3BD1449E15DBA6DA005B311B /* UIView+HierarchyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1449115DBA6DA005B311B /* UIView+HierarchyAdditions.m */; };
+		3BD1449F15DBA7CA005B311B /* libSBLayoutManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD1446B15DBA6A3005B311B /* libSBLayoutManager.a */; };
 		3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion"; }; };
 		3BE20DD015D2C186003D3D4B /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BE20DC015D2C186003D3D4B /* README.markdown */; };
 		3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE20DD515D2C380003D3D4B /* libxml2.dylib */; };
@@ -71,6 +86,18 @@
 			remoteInfo = iOSDevWeekly;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BD1446915DBA6A3005B311B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B4E423E15D9495E00713EF7 /* COGUDevWeeklyNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyNewsItem.h; sourceTree = "<group>"; };
@@ -151,6 +178,35 @@
 		3BC7AA3715DAADA400B585DF /* COGUNewsItemSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUNewsItemSectionHeaderView.h; sourceTree = "<group>"; };
 		3BC7AA3815DAADA400B585DF /* COGUNewsItemSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUNewsItemSectionHeaderView.m; sourceTree = "<group>"; };
 		3BC7AA3A15DAADD300B585DF /* COGUNewsItemSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COGUNewsItemSectionHeaderView.xib; sourceTree = "<group>"; };
+		3BD1446B15DBA6A3005B311B /* libSBLayoutManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSBLayoutManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD1446F15DBA6A3005B311B /* SBLayoutManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBLayoutManager-Prefix.pch"; sourceTree = "<group>"; };
+		3BD1447815DBA6DA005B311B /* CGRectHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGRectHelpers.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/CGRectHelpers.h; sourceTree = SOURCE_ROOT; };
+		3BD1447915DBA6DA005B311B /* CGRectHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CGRectHelpers.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/CGRectHelpers.m; sourceTree = SOURCE_ROOT; };
+		3BD1447A15DBA6DA005B311B /* SBCenteredConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBCenteredConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBCenteredConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1447B15DBA6DA005B311B /* SBCenteredConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBCenteredConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBCenteredConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1447C15DBA6DA005B311B /* SBHorizontalConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBHorizontalConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBHorizontalConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1447D15DBA6DA005B311B /* SBHorizontalConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBHorizontalConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBHorizontalConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1447E15DBA6DA005B311B /* SBLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBLayoutConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBLayoutConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1447F15DBA6DA005B311B /* SBLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBLayoutConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBLayoutConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1448015DBA6DA005B311B /* SBLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBLayoutItem.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBLayoutItem.h; sourceTree = SOURCE_ROOT; };
+		3BD1448115DBA6DA005B311B /* SBLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBLayoutItem.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBLayoutItem.m; sourceTree = SOURCE_ROOT; };
+		3BD1448215DBA6DA005B311B /* SBLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBLayoutManager.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBLayoutManager.h; sourceTree = SOURCE_ROOT; };
+		3BD1448315DBA6DA005B311B /* SBLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBLayoutManager.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBLayoutManager.m; sourceTree = SOURCE_ROOT; };
+		3BD1448415DBA6DA005B311B /* SBRemainingSpaceConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBRemainingSpaceConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBRemainingSpaceConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1448515DBA6DA005B311B /* SBRemainingSpaceConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBRemainingSpaceConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBRemainingSpaceConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1448615DBA6DA005B311B /* SBSupressItemConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBSupressItemConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBSupressItemConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1448715DBA6DA005B311B /* SBSupressItemConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBSupressItemConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBSupressItemConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1448815DBA6DA005B311B /* SBVariableContentHeightConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBVariableContentHeightConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVariableContentHeightConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1448915DBA6DA005B311B /* SBVariableContentHeightConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBVariableContentHeightConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVariableContentHeightConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1448A15DBA6DA005B311B /* SBVariableContentSizeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBVariableContentSizeConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVariableContentSizeConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1448B15DBA6DA005B311B /* SBVariableContentSizeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBVariableContentSizeConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVariableContentSizeConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1448C15DBA6DA005B311B /* SBVariableContentWidthConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBVariableContentWidthConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVariableContentWidthConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1448D15DBA6DA005B311B /* SBVariableContentWidthConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBVariableContentWidthConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVariableContentWidthConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1448E15DBA6DA005B311B /* SBVerticalConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBVerticalConstraint.h; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVerticalConstraint.h; sourceTree = SOURCE_ROOT; };
+		3BD1448F15DBA6DA005B311B /* SBVerticalConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBVerticalConstraint.m; path = iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/SBVerticalConstraint.m; sourceTree = SOURCE_ROOT; };
+		3BD1449015DBA6DA005B311B /* UIView+HierarchyAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+HierarchyAdditions.h"; path = "iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/UIView+HierarchyAdditions.h"; sourceTree = SOURCE_ROOT; };
+		3BD1449115DBA6DA005B311B /* UIView+HierarchyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+HierarchyAdditions.m"; path = "iOSDevWeekly/Vendor/SBLayoutManager/SBLayoutManager/UIView+HierarchyAdditions.m"; sourceTree = SOURCE_ROOT; };
+		3BD144A015DBA834005B311B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = iOSDevWeekly/Vendor/SBLayoutManager/README.md; sourceTree = SOURCE_ROOT; };
 		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
 		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
 		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
@@ -164,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD1449F15DBA7CA005B311B /* libSBLayoutManager.a in Frameworks */,
 				3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */,
 				3B6CD63315D2A561001EDACB /* CoreData.framework in Frameworks */,
 				3B6B738F15D27FC3006FF3F3 /* UIKit.framework in Frameworks */,
@@ -182,6 +239,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD1446815DBA6A3005B311B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD1446C15DBA6A3005B311B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -190,6 +255,7 @@
 			children = (
 				3B6B739415D27FC3006FF3F3 /* iOSDevWeekly */,
 				3B6B73B215D27FC3006FF3F3 /* iOSDevWeeklyTests */,
+				3BD1446D15DBA6A3005B311B /* SBLayoutManager */,
 				3B6B738D15D27FC3006FF3F3 /* Frameworks */,
 				3B6B738B15D27FC3006FF3F3 /* Products */,
 			);
@@ -200,6 +266,7 @@
 			children = (
 				3B6B738A15D27FC3006FF3F3 /* iOSDevWeekly.app */,
 				3B6B73AB15D27FC3006FF3F3 /* iOSDevWeeklyTests.octest */,
+				3BD1446B15DBA6A3005B311B /* libSBLayoutManager.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,6 +403,49 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		3BD1446D15DBA6A3005B311B /* SBLayoutManager */ = {
+			isa = PBXGroup;
+			children = (
+				3BD144A015DBA834005B311B /* README.md */,
+				3BD1447815DBA6DA005B311B /* CGRectHelpers.h */,
+				3BD1447915DBA6DA005B311B /* CGRectHelpers.m */,
+				3BD1447A15DBA6DA005B311B /* SBCenteredConstraint.h */,
+				3BD1447B15DBA6DA005B311B /* SBCenteredConstraint.m */,
+				3BD1447C15DBA6DA005B311B /* SBHorizontalConstraint.h */,
+				3BD1447D15DBA6DA005B311B /* SBHorizontalConstraint.m */,
+				3BD1447E15DBA6DA005B311B /* SBLayoutConstraint.h */,
+				3BD1447F15DBA6DA005B311B /* SBLayoutConstraint.m */,
+				3BD1448015DBA6DA005B311B /* SBLayoutItem.h */,
+				3BD1448115DBA6DA005B311B /* SBLayoutItem.m */,
+				3BD1448215DBA6DA005B311B /* SBLayoutManager.h */,
+				3BD1448315DBA6DA005B311B /* SBLayoutManager.m */,
+				3BD1448415DBA6DA005B311B /* SBRemainingSpaceConstraint.h */,
+				3BD1448515DBA6DA005B311B /* SBRemainingSpaceConstraint.m */,
+				3BD1448615DBA6DA005B311B /* SBSupressItemConstraint.h */,
+				3BD1448715DBA6DA005B311B /* SBSupressItemConstraint.m */,
+				3BD1448815DBA6DA005B311B /* SBVariableContentHeightConstraint.h */,
+				3BD1448915DBA6DA005B311B /* SBVariableContentHeightConstraint.m */,
+				3BD1448A15DBA6DA005B311B /* SBVariableContentSizeConstraint.h */,
+				3BD1448B15DBA6DA005B311B /* SBVariableContentSizeConstraint.m */,
+				3BD1448C15DBA6DA005B311B /* SBVariableContentWidthConstraint.h */,
+				3BD1448D15DBA6DA005B311B /* SBVariableContentWidthConstraint.m */,
+				3BD1448E15DBA6DA005B311B /* SBVerticalConstraint.h */,
+				3BD1448F15DBA6DA005B311B /* SBVerticalConstraint.m */,
+				3BD1449015DBA6DA005B311B /* UIView+HierarchyAdditions.h */,
+				3BD1449115DBA6DA005B311B /* UIView+HierarchyAdditions.m */,
+				3BD1446E15DBA6A3005B311B /* Supporting Files */,
+			);
+			path = SBLayoutManager;
+			sourceTree = "<group>";
+		};
+		3BD1446E15DBA6A3005B311B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BD1446F15DBA6A3005B311B /* SBLayoutManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3BE20DA815D2C185003D3D4B /* GDataXML-HTML */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +512,23 @@
 			productReference = 3B6B73AB15D27FC3006FF3F3 /* iOSDevWeeklyTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		3BD1446A15DBA6A3005B311B /* SBLayoutManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD1447615DBA6A3005B311B /* Build configuration list for PBXNativeTarget "SBLayoutManager" */;
+			buildPhases = (
+				3BD1446715DBA6A3005B311B /* Sources */,
+				3BD1446815DBA6A3005B311B /* Frameworks */,
+				3BD1446915DBA6A3005B311B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBLayoutManager;
+			productName = SBLayoutManager;
+			productReference = 3BD1446B15DBA6A3005B311B /* libSBLayoutManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -426,6 +553,7 @@
 			targets = (
 				3B6B738915D27FC3006FF3F3 /* iOSDevWeekly */,
 				3B6B73AA15D27FC3006FF3F3 /* iOSDevWeeklyTests */,
+				3BD1446A15DBA6A3005B311B /* SBLayoutManager */,
 			);
 		};
 /* End PBXProject section */
@@ -520,6 +648,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6B73BA15D27FC3006FF3F3 /* iOSDevWeeklyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD1446715DBA6A3005B311B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD1449215DBA6DA005B311B /* CGRectHelpers.m in Sources */,
+				3BD1449315DBA6DA005B311B /* SBCenteredConstraint.m in Sources */,
+				3BD1449415DBA6DA005B311B /* SBHorizontalConstraint.m in Sources */,
+				3BD1449515DBA6DA005B311B /* SBLayoutConstraint.m in Sources */,
+				3BD1449615DBA6DA005B311B /* SBLayoutItem.m in Sources */,
+				3BD1449715DBA6DA005B311B /* SBLayoutManager.m in Sources */,
+				3BD1449815DBA6DA005B311B /* SBRemainingSpaceConstraint.m in Sources */,
+				3BD1449915DBA6DA005B311B /* SBSupressItemConstraint.m in Sources */,
+				3BD1449A15DBA6DA005B311B /* SBVariableContentHeightConstraint.m in Sources */,
+				3BD1449B15DBA6DA005B311B /* SBVariableContentSizeConstraint.m in Sources */,
+				3BD1449C15DBA6DA005B311B /* SBVariableContentWidthConstraint.m in Sources */,
+				3BD1449D15DBA6DA005B311B /* SBVerticalConstraint.m in Sources */,
+				3BD1449E15DBA6DA005B311B /* UIView+HierarchyAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +840,38 @@
 			};
 			name = Release;
 		};
+		3BD1447415DBA6A3005B311B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				DSTROOT = /tmp/SBLayoutManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBLayoutManager/SBLayoutManager-Prefix.pch";
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3BD1447515DBA6A3005B311B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				DSTROOT = /tmp/SBLayoutManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBLayoutManager/SBLayoutManager-Prefix.pch";
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -721,6 +901,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3BD1447615DBA6A3005B311B /* Build configuration list for PBXNativeTarget "SBLayoutManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD1447415DBA6A3005B311B /* Debug */,
+				3BD1447515DBA6A3005B311B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

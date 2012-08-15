@@ -38,4 +38,12 @@
 */
 + (CGFloat)preferredCellHeight;
 
+
+/*!
+ @brief Called when creating the cell from the nib file is finished.
+ @discussion There are times where you want to run some customization to the cell right after it was initialized. Override this method in the custom subclass to implement such behaviour. This method is called only once during the life-time of the receiver.
+ Note: You have to call -[super nibTableCellDidInitialize] in your custom implementation of this method <b>before</b> writing your own code.
+ */
+- (void)nibTableCellDidInitialize;
+
 @end

@@ -26,6 +26,7 @@
 
 @property (strong, nonatomic) COGUDevWeeklyNewsManager* newsManager;
 @property (strong, nonatomic) NSFetchedResultsController* fetchedNewsResultsController;
+@property (strong, nonatomic) NSMutableArray* newsListingRowHeightsCache;
 
 @end
 

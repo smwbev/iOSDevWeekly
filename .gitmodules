@@ -4,3 +4,6 @@
 [submodule "iOSDevWeekly/Vendor/GDataXML-HTML"]
 	path = iOSDevWeekly/Vendor/GDataXML-HTML
 	url = https://github.com/graetzer/GDataXML-HTML.git
+[submodule "iOSDevWeekly/Vendor/SBLayoutManager"]
+	path = iOSDevWeekly/Vendor/SBLayoutManager
+	url = https://github.com/breeno/SBLayoutManager.git

@@ -15,7 +15,10 @@
 
 + (id)createCell;
 {
-    id cell = [[NSBundle mainBundle] loadNibNamed:[self reuseIdentifier] owner:nil options:nil][0];
+    COGUNibTableCell* cell = [[NSBundle mainBundle] loadNibNamed:[self reuseIdentifier] owner:nil options:nil][0];
+
+    [cell nibTableCellDidInitialize];
+
     return cell;
 }
 
@@ -30,6 +33,11 @@
 {
     CGFloat preferredCellHeight = [[self createCell] frame].size.height;
     return preferredCellHeight;
+}
+
+
+- (void)nibTableCellDidInitialize;
+{
 }
 
 @end

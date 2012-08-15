@@ -9,6 +9,7 @@
 #import "COGUNewsViewController.h"
 
 #import "NSArray+COGUAdditions.h"
+#import "NSMutableArray+COGUAdditions.h"
 
 #import "COGUDevWeeklyCategory.h"
 #import "COGUDevWeeklyIssue.h"
@@ -24,6 +25,7 @@
 @synthesize newsListingHeaderControl = _newsListingHeaderControl;
 @synthesize fetchedNewsResultsController = _fetchedNewsResultsController;
 @synthesize newsManager = _newsManager;
+@synthesize newsListingRowHeightsCache = _newsListingRowHeightsCache;
 
 
 #pragma mark UITableViewDataSource
@@ -45,7 +47,8 @@
     if (rowsCount > NSIntegerMax)
         rowsCount = NSIntegerMax;
 
-    rowsCount = MIN(rowsCount, 5);
+    static NSInteger const kMaxVisibleRowsPerSectionCount = 3;
+    rowsCount = MIN(rowsCount, kMaxVisibleRowsPerSectionCount);
 
     return (NSInteger)rowsCount;
 }
@@ -60,9 +63,7 @@
         cell = [COGUNewsItemCell createCell];
 
     COGUDevWeeklyNewsItem* newsItem = [self.fetchedNewsResultsController objectAtIndexPath:indexPath];
-    cell.titleControl.text = newsItem.title;
-    cell.explanationControl.text = newsItem.explanation;
-    cell.issueControl.text = newsItem.issue.userReadableName;
+    [cell configureWithNewsItem:newsItem];
 
     return cell;
 }
@@ -83,6 +84,22 @@
     view.titleControl.text = sectionName;
 
     return view;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSNumber* cachedHeightNumber = [self.newsListingRowHeightsCache cogu_objectAtLazyInitializedIndexPath:indexPath defaultObject:@(NAN)];
+
+    if (![cachedHeightNumber isEqualToNumber:@(NAN)])
+        return cachedHeightNumber.floatValue;
+
+    COGUDevWeeklyNewsItem* newsItem = [self.fetchedNewsResultsController objectAtIndexPath:indexPath];
+    CGFloat rowHeight = [COGUNewsItemCell preferredHeightWhenConfiguredWithNewsItem:newsItem inTableView:tableView];
+
+    [self.newsListingRowHeightsCache cogu_replaceObjectAtLazyInitializedIndexPath:indexPath withObject:@(rowHeight)];
+
+    return rowHeight;
 }
 
 
@@ -136,6 +153,18 @@
     _fetchedNewsResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchNewsItemsRequest managedObjectContext:self.newsManager.devWeeklyManagedObjectContext sectionNameKeyPath:@"category.type" cacheName:@"fetchedDevWeeklyNewsResults.cache"];
 
     return _fetchedNewsResultsController;
+}
+
+
+- (NSMutableArray*)newsListingRowHeightsCache;
+{
+    if (_newsListingRowHeightsCache)
+        return _newsListingRowHeightsCache;
+
+    NSUInteger numberOfSections = (NSUInteger)self.newsListingControl.numberOfSections;
+    _newsListingRowHeightsCache = [NSMutableArray arrayWithCapacity:numberOfSections];
+
+    return _newsListingRowHeightsCache;
 }
 
 @end

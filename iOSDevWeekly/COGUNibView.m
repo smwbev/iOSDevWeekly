@@ -16,9 +16,9 @@
 
 + (id)createView;
 {
-    id view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil][0];
+    COGUNibView* view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil][0];
 
-    [(COGUNibView*)view nibViewDidInitialize];
+    [view nibViewDidInitialize];
 
     return view;
 }
