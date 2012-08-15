@@ -215,6 +215,7 @@
 		3BD144A215DBDA84005B311B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3BD144A615DBE1E6005B311B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3BD144A715DBE1E6005B311B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3BD144AE15DBEE72005B311B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
 		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
 		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
@@ -295,6 +296,7 @@
 		3B6B739415D27FC3006FF3F3 /* iOSDevWeekly */ = {
 			isa = PBXGroup;
 			children = (
+				3BD144AE15DBEE72005B311B /* README.md */,
 				3B6B739D15D27FC3006FF3F3 /* COGUAppDelegate.h */,
 				3B6B739E15D27FC3006FF3F3 /* COGUAppDelegate.m */,
 				3B6B73DF15D28D45006FF3F3 /* COGUDevWeeklyNewsManager.h */,
@@ -931,6 +933,7 @@
 				3BD1447515DBA6A3005B311B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
