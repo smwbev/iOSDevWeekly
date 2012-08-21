@@ -24,6 +24,7 @@
     [super nibViewDidInitialize];
 
     self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
     self.layer.shadowOpacity = 0.5;
     self.layer.shadowRadius = 1.0;
     self.layer.shadowOffset = CGSizeMake(0, 1);
