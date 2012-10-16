@@ -10,6 +10,7 @@
 
 #import "NSArray+COGUAdditions.h"
 #import "NSMutableArray+COGUAdditions.h"
+#import "UISearchBar+COGUAdditions.h"
 
 #import "COGUDevWeeklyCategory.h"
 #import "COGUDevWeeklyIssue.h"
@@ -125,6 +126,7 @@
 - (void)viewDidLoad;
 {
     [self _configureNewsListingControlAfterViewDidLoad];
+    [self _configureMatchingNewsListingControlAfterViewDidLoad];
     [self.newsManager prefillIssuesDatabaseIfEmptySuccessHandler:^(id context) {
         [self.fetchedNewsResultsController performFetch:nil];
         [self.newsListingControl reloadData];
@@ -221,6 +223,13 @@
 - (void)_configureNewsListingControlAfterViewDidLoad;
 {
     self.newsListingControl.rowHeight = [COGUNewsItemCell preferredCellHeight];
+}
+
+
+- (void)_configureMatchingNewsListingControlAfterViewDidLoad;
+{
+    self.searchDisplayController.searchBar.placeholder = NSLocalizedString(@"Livesearch", nil);
+    self.searchDisplayController.searchBar.cogu_returnKeyType = UIReturnKeyDone;
 }
 
 

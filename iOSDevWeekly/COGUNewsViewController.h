@@ -35,6 +35,8 @@
 @interface COGUNewsViewController (Private)
 
 - (void)_configureNewsListingControlAfterViewDidLoad;
+- (void)_configureMatchingNewsListingControlAfterViewDidLoad;
+
 - (NSFetchedResultsController*)_fetchedResultsControllerForTableView:(UITableView*)tableView;
 - (NSMutableArray*)_rowHeightsCacheForTableView:(UITableView*)tableView;
 
