@@ -10,6 +10,7 @@
 
 #import "NSArray+COGUAdditions.h"
 #import "NSMutableArray+COGUAdditions.h"
+#import "UIImage+COGUAdditions.h"
 #import "UISearchBar+COGUAdditions.h"
 
 #import "COGUDevWeeklyCategory.h"
@@ -230,6 +231,7 @@
 {
     self.searchDisplayController.searchBar.placeholder = NSLocalizedString(@"Livesearch", nil);
     self.searchDisplayController.searchBar.cogu_returnKeyType = UIReturnKeyDone;
+    self.searchDisplayController.searchBar.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
 }
 
 

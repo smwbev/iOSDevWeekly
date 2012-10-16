@@ -77,6 +77,7 @@
 		3BD144A915DBE1E6005B311B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD144A715DBE1E6005B311B /* Icon@2x.png */; };
 		3BDC55AB162D8E5B000A5B1B /* UISearchBar+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC55AA162D8E5B000A5B1B /* UISearchBar+COGUAdditions.m */; };
 		3BDC55AE162D8FD7000A5B1B /* UIView+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC55AD162D8FD7000A5B1B /* UIView+COGUAdditions.m */; };
+		3BDC55B1162DDBAE000A5B1B /* UIImage+COGUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC55B0162DDBAE000A5B1B /* UIImage+COGUAdditions.m */; };
 		3BE20DCD15D2C186003D3D4B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion"; }; };
 		3BE20DD015D2C186003D3D4B /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BE20DC015D2C186003D3D4B /* README.markdown */; };
 		3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE20DD515D2C380003D3D4B /* libxml2.dylib */; };
@@ -222,6 +223,9 @@
 		3BDC55AA162D8E5B000A5B1B /* UISearchBar+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+COGUAdditions.m"; sourceTree = "<group>"; };
 		3BDC55AC162D8FD7000A5B1B /* UIView+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+COGUAdditions.h"; sourceTree = "<group>"; };
 		3BDC55AD162D8FD7000A5B1B /* UIView+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+COGUAdditions.m"; sourceTree = "<group>"; };
+		3BDC55AF162DDBAE000A5B1B /* UIImage+COGUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+COGUAdditions.h"; sourceTree = "<group>"; };
+		3BDC55B0162DDBAE000A5B1B /* UIImage+COGUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+COGUAdditions.m"; sourceTree = "<group>"; };
+		3BDC55B2162DDF84000A5B1B /* CGGeometry+COGUAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+COGUAdditions.h"; sourceTree = "<group>"; };
 		3BE20DB915D2C186003D3D4B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "GDataXML-HTML/lib/GDataXMLNode.h"; sourceTree = "<group>"; };
 		3BE20DBA15D2C186003D3D4B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "GDataXML-HTML/lib/GDataXMLNode.m"; sourceTree = "<group>"; };
 		3BE20DC015D2C186003D3D4B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
@@ -487,6 +491,7 @@
 		3BE20DDB15D3C36A003D3D4B /* iOSCategories */ = {
 			isa = PBXGroup;
 			children = (
+				3BDC55B2162DDF84000A5B1B /* CGGeometry+COGUAdditions.h */,
 				3B834EC515D50704006724FB /* NSArray+COGUAdditions.h */,
 				3B834EC615D50704006724FB /* NSArray+COGUAdditions.m */,
 				3BE20DDC15D3C5DE003D3D4B /* NSObject+COGUAdditions.h */,
@@ -497,10 +502,12 @@
 				3B6329C515D7AE8D003F0D88 /* NSString+COGUAdditions.m */,
 				3B834ED515D533B9006724FB /* UIApplication+COGUAdditions.h */,
 				3B834ED615D533B9006724FB /* UIApplication+COGUAdditions.m */,
-				3BDC55AC162D8FD7000A5B1B /* UIView+COGUAdditions.h */,
-				3BDC55AD162D8FD7000A5B1B /* UIView+COGUAdditions.m */,
+				3BDC55AF162DDBAE000A5B1B /* UIImage+COGUAdditions.h */,
+				3BDC55B0162DDBAE000A5B1B /* UIImage+COGUAdditions.m */,
 				3BDC55A9162D8E5B000A5B1B /* UISearchBar+COGUAdditions.h */,
 				3BDC55AA162D8E5B000A5B1B /* UISearchBar+COGUAdditions.m */,
+				3BDC55AC162D8FD7000A5B1B /* UIView+COGUAdditions.h */,
+				3BDC55AD162D8FD7000A5B1B /* UIView+COGUAdditions.m */,
 			);
 			name = iOSCategories;
 			sourceTree = "<group>";
@@ -678,6 +685,7 @@
 				3BC7AA3915DAADA400B585DF /* COGUNewsItemSectionHeaderView.m in Sources */,
 				3BDC55AB162D8E5B000A5B1B /* UISearchBar+COGUAdditions.m in Sources */,
 				3BDC55AE162D8FD7000A5B1B /* UIView+COGUAdditions.m in Sources */,
+				3BDC55B1162DDBAE000A5B1B /* UIImage+COGUAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
