@@ -14,10 +14,9 @@
 @class COGUDevWeeklyNewsManager;
 
 
-@interface COGUNewsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>;
+@interface COGUNewsViewController : UIViewController<UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDataSource, UITableViewDelegate>;
 
 @property (weak, nonatomic) IBOutlet UITableView *newsListingControl;
-@property (strong, nonatomic) IBOutlet UIView *newsListingHeaderControl;
 
 @end
 
@@ -26,7 +25,9 @@
 
 @property (strong, nonatomic) COGUDevWeeklyNewsManager* newsManager;
 @property (strong, nonatomic) NSFetchedResultsController* fetchedNewsResultsController;
+@property (strong, nonatomic) NSFetchedResultsController* fetchedMatchingNewsResultsController;
 @property (strong, nonatomic) NSMutableArray* newsListingRowHeightsCache;
+@property (strong, nonatomic) NSMutableArray* matchingNewsRowHeightsCache;
 
 @end
 
@@ -34,5 +35,7 @@
 @interface COGUNewsViewController (Private)
 
 - (void)_configureNewsListingControlAfterViewDidLoad;
+- (NSFetchedResultsController*)_fetchedResultsControllerForTableView:(UITableView*)tableView;
+- (NSMutableArray*)_rowHeightsCacheForTableView:(UITableView*)tableView;
 
 @end
