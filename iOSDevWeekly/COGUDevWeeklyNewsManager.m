@@ -291,7 +291,7 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
     NSAssert(landingPageDocument != nil, nil);
     NSArray* pathToIssuesCandidates = [landingPageDocument nodesForXPath:@"//a" error:nil];
     GDataXMLElement* pathToIssuesElement = [pathToIssuesCandidates cogu_firstObjectPassingTest:^BOOL(GDataXMLElement* pathToIssuesCandidate, NSUInteger idx, BOOL *stop) {
-        return [pathToIssuesCandidate.stringValue.lowercaseString isEqualToString:@"browse the archive"];
+        return [pathToIssuesCandidate.stringValue.lowercaseString isEqualToString:@"archived issues"];
     }];
 
     NSString* pathToIssues = [pathToIssuesElement attributeForName:@"href"].stringValue;
