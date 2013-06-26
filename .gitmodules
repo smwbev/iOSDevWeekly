@@ -7,3 +7,6 @@
 [submodule "iOSDevWeekly/Vendor/SBLayoutManager"]
 	path = iOSDevWeekly/Vendor/SBLayoutManager
 url=https://github.com/cogun/SBLayoutManager.git
+[submodule "iOSDevWeekly/Vendor/ODRefreshControl"]
+	path = iOSDevWeekly/Vendor/ODRefreshControl
+	url = https://github.com/cogun/ODRefreshControl.git
