@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B408A74177AAF0B008C1FE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B408A73177AAF0B008C1FE6 /* Default-568h@2x.png */; };
 		3B4E424015D9495E00713EF7 /* COGUDevWeeklyNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E423F15D9495E00713EF7 /* COGUDevWeeklyNewsItem.m */; };
 		3B4E424415D9495F00713EF7 /* COGUDevWeeklyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E424315D9495F00713EF7 /* COGUDevWeeklyCategory.m */; };
 		3B4E424715D9495F00713EF7 /* COGUDevWeeklyIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E424615D9495F00713EF7 /* COGUDevWeeklyIssue.m */; };
@@ -107,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B408A73177AAF0B008C1FE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3B4E423E15D9495E00713EF7 /* COGUDevWeeklyNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyNewsItem.h; sourceTree = "<group>"; };
 		3B4E423F15D9495E00713EF7 /* COGUDevWeeklyNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyNewsItem.m; sourceTree = "<group>"; };
 		3B4E424215D9495F00713EF7 /* COGUDevWeeklyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyCategory.h; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 				3B4E425B15DA9A9100713EF7 /* completeIssueIconSelected@2x.png */,
 				3BD144A115DBDA84005B311B /* Default.png */,
 				3BD144A215DBDA84005B311B /* Default@2x.png */,
+				3B408A73177AAF0B008C1FE6 /* Default-568h@2x.png */,
 				3BD144A615DBE1E6005B311B /* Icon.png */,
 				3BD144A715DBE1E6005B311B /* Icon@2x.png */,
 				3B4E425015DA935700713EF7 /* newsItemBackground.png */,
@@ -621,6 +624,7 @@
 				3BD144A415DBDA84005B311B /* Default@2x.png in Resources */,
 				3BD144A815DBE1E6005B311B /* Icon.png in Resources */,
 				3BD144A915DBE1E6005B311B /* Icon@2x.png in Resources */,
+				3B408A74177AAF0B008C1FE6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,7 +783,7 @@
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
@@ -813,7 +817,7 @@
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
