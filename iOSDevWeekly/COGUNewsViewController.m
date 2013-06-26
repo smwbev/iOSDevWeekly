@@ -137,15 +137,6 @@
 }
 
 
-- (void)viewDidUnload;
-{
-    self.newsListingControl = nil;
-    self.fetchedNewsResultsController = nil;
-
-    [super viewDidUnload];
-}
-
-
 #pragma mark Private properties
 
 - (COGUDevWeeklyNewsManager*)newsManager;

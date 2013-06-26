@@ -112,8 +112,6 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
                     NSBlockCallSafely(failure, [fetchIssuesErrors objectAtIndex:0]);
                 else
                     NSBlockCallSafely(success, issueDocumentsInOriginalOrder);
-            
-                dispatch_release(fetchIssuesGroup);
             });
         } failureHandler:^(NSError *error) {
             NSBlockCallSafely(failure, error);
