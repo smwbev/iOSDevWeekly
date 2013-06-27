@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
 
+#import "ODRefreshControl.h"
+
 
 @class COGUDevWeeklyNewsManager;
 
@@ -28,6 +30,7 @@
 @property (strong, nonatomic) NSFetchedResultsController* fetchedMatchingNewsResultsController;
 @property (strong, nonatomic) NSMutableArray* newsListingRowHeightsCache;
 @property (strong, nonatomic) NSMutableArray* matchingNewsRowHeightsCache;
+@property (strong, nonatomic) ODRefreshControl* newsRefreshControl;
 
 @end
 
@@ -36,6 +39,7 @@
 
 - (void)_configureNewsListingControlAfterViewDidLoad;
 - (void)_configureMatchingNewsListingControlAfterViewDidLoad;
+- (void)_configureNewsRefreshControl;
 
 - (NSFetchedResultsController*)_fetchedResultsControllerForTableView:(UITableView*)tableView;
 - (NSMutableArray*)_rowHeightsCacheForTableView:(UITableView*)tableView;

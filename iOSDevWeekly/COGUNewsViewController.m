@@ -131,6 +131,7 @@
     [self.newsManager prefillIssuesDatabaseIfEmptySuccessHandler:^(id context) {
         [self.fetchedNewsResultsController performFetch:nil];
         [self.newsListingControl reloadData];
+        [self _configureNewsRefreshControl];
     } failureHandler:^(NSError *error) {
         // TODO: implement error handling
     }];
@@ -223,6 +224,12 @@
     self.searchDisplayController.searchBar.placeholder = NSLocalizedString(@"Livesearch", nil);
     self.searchDisplayController.searchBar.cogu_returnKeyType = UIReturnKeyDone;
     self.searchDisplayController.searchBar.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
+}
+
+
+- (void)_configureNewsRefreshControl;
+{
+    self.newsRefreshControl = [[ODRefreshControl alloc] initInScrollView:self.newsListingControl];
 }
 
 

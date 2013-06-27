@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B408A74177AAF0B008C1FE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B408A73177AAF0B008C1FE6 /* Default-568h@2x.png */; };
+		3B408A78177AB53E008C1FE6 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B408A77177AB53E008C1FE6 /* ODRefreshControl.m */; };
+		3B408A7A177AB831008C1FE6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B408A79177AB831008C1FE6 /* QuartzCore.framework */; };
 		3B4E424015D9495E00713EF7 /* COGUDevWeeklyNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E423F15D9495E00713EF7 /* COGUDevWeeklyNewsItem.m */; };
 		3B4E424415D9495F00713EF7 /* COGUDevWeeklyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E424315D9495F00713EF7 /* COGUDevWeeklyCategory.m */; };
 		3B4E424715D9495F00713EF7 /* COGUDevWeeklyIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E424615D9495F00713EF7 /* COGUDevWeeklyIssue.m */; };
@@ -109,6 +111,9 @@
 
 /* Begin PBXFileReference section */
 		3B408A73177AAF0B008C1FE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B408A76177AB53E008C1FE6 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
+		3B408A77177AB53E008C1FE6 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		3B408A79177AB831008C1FE6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B4E423E15D9495E00713EF7 /* COGUDevWeeklyNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyNewsItem.h; sourceTree = "<group>"; };
 		3B4E423F15D9495E00713EF7 /* COGUDevWeeklyNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COGUDevWeeklyNewsItem.m; sourceTree = "<group>"; };
 		3B4E424215D9495F00713EF7 /* COGUDevWeeklyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COGUDevWeeklyCategory.h; sourceTree = "<group>"; };
@@ -241,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B408A7A177AB831008C1FE6 /* QuartzCore.framework in Frameworks */,
 				3BD1449F15DBA7CA005B311B /* libSBLayoutManager.a in Frameworks */,
 				3BE20DD615D2C380003D3D4B /* libxml2.dylib in Frameworks */,
 				3B6CD63315D2A561001EDACB /* CoreData.framework in Frameworks */,
@@ -271,12 +277,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B408A75177AB53E008C1FE6 /* ODRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				3B408A76177AB53E008C1FE6 /* ODRefreshControl.h */,
+				3B408A77177AB53E008C1FE6 /* ODRefreshControl.m */,
+			);
+			name = ODRefreshControl;
+			path = ODRefreshControl/ODRefreshControl;
+			sourceTree = "<group>";
+		};
 		3B6B737F15D27FC3006FF3F3 = {
 			isa = PBXGroup;
 			children = (
 				3B6B739415D27FC3006FF3F3 /* iOSDevWeekly */,
-				3B6B73B215D27FC3006FF3F3 /* iOSDevWeeklyTests */,
 				3BD1446D15DBA6A3005B311B /* SBLayoutManager */,
+				3B6B73B215D27FC3006FF3F3 /* iOSDevWeeklyTests */,
 				3B6B738D15D27FC3006FF3F3 /* Frameworks */,
 				3B6B738B15D27FC3006FF3F3 /* Products */,
 			);
@@ -297,6 +313,7 @@
 			children = (
 				3BE20DD515D2C380003D3D4B /* libxml2.dylib */,
 				3B6CD63215D2A561001EDACB /* CoreData.framework */,
+				3B408A79177AB831008C1FE6 /* QuartzCore.framework */,
 				3B6B738E15D27FC3006FF3F3 /* UIKit.framework */,
 				3B6B739015D27FC3006FF3F3 /* Foundation.framework */,
 				3B6B739215D27FC3006FF3F3 /* CoreGraphics.framework */,
@@ -382,8 +399,9 @@
 		3B6CD5B115D2A3BA001EDACB /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				3BE20DA815D2C185003D3D4B /* GDataXML-HTML */,
 				3B6CD5B215D2A3BA001EDACB /* AFNetworking */,
+				3BE20DA815D2C185003D3D4B /* GDataXML-HTML */,
+				3B408A75177AB53E008C1FE6 /* ODRefreshControl */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -690,6 +708,7 @@
 				3BDC55AB162D8E5B000A5B1B /* UISearchBar+COGUAdditions.m in Sources */,
 				3BDC55AE162D8FD7000A5B1B /* UIView+COGUAdditions.m in Sources */,
 				3BDC55B1162DDBAE000A5B1B /* UIImage+COGUAdditions.m in Sources */,
+				3B408A78177AB53E008C1FE6 /* ODRefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,7 +805,6 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -820,7 +838,6 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
