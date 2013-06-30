@@ -415,8 +415,6 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
     static BOOL const kConfiguringCategoryEntitiesFailed = NO;
     __block BOOL configuringCategoryEntitiesSucceeded = kConfiguringCategoryEntitiesFailed;
 
-    issueEntity.newsItems = [NSOrderedSet orderedSet];
-
     NSArray* issueCategoryElements = [self _categoryElementsInIssue:issue error:error];
     if (issueCategoryElements == nil)
         return kConfiguringCategoryEntitiesFailed;
