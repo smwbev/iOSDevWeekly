@@ -230,6 +230,7 @@
 - (void)_configureNewsRefreshControl;
 {
     self.newsRefreshControl = [[ODRefreshControl alloc] initInScrollView:self.newsListingControl];
+    [self.newsRefreshControl addTarget:self action:@selector(_newsShouldBeRefreshed:) forControlEvents:UIControlEventValueChanged];
 }
 
 
@@ -256,6 +257,21 @@
 
     ZAssert(NO, @"Must pass a known tableView");
     return nil;
+}
+
+
+- (void)_newsShouldBeRefreshed:(ODRefreshControl*)refreshControl;
+{
+    NSAssert(refreshControl == self.newsRefreshControl, @"There should be only one refresh control");
+
+    [self.newsManager syncIssuesDatabaseWithDevWeeklySuccessHandler:^(id context) {
+        [self.fetchedNewsResultsController performFetch:nil];
+        [self.newsListingRowHeightsCache removeAllObjects];
+        [self.newsListingControl reloadData];
+        [refreshControl endRefreshing];
+    } failureHandler:^(NSError *error) {
+        [refreshControl endRefreshing];
+    }];
 }
 
 @end

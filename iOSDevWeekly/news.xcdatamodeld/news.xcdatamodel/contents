@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12A269" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Category" representedClassName="COGUDevWeeklyCategory" syncable="YES">
         <attribute name="type" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="userReadableName" attributeType="String" syncable="YES"/>
@@ -20,7 +20,7 @@
         <relationship name="issue" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="newsItems" inverseEntity="Issue" syncable="YES"/>
     </entity>
     <fetchRequest name="fetchCategoryRequest" entity="Category" predicateString="type == &quot;$TYPE&quot;"/>
-    <fetchRequest name="fetchIssueRequest" entity="Issue" predicateString="number == 0"/>
+    <fetchRequest name="fetchIssueRequest" entity="Issue" predicateString="number == $NUMBER"/>
     <fetchRequest name="fetchIssuesCountRequest" entity="Issue" returnObjectsAsFaults="YES"/>
     <elements>
         <element name="Category" positionX="153" positionY="9" width="128" height="84"/>

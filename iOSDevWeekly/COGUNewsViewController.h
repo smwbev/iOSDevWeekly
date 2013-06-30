@@ -44,4 +44,6 @@
 - (NSFetchedResultsController*)_fetchedResultsControllerForTableView:(UITableView*)tableView;
 - (NSMutableArray*)_rowHeightsCacheForTableView:(UITableView*)tableView;
 
+- (void)_newsShouldBeRefreshed:(ODRefreshControl*)refreshControl;
+
 @end

@@ -44,7 +44,7 @@
 
 /*!
  @brief Returns an object in the receiver at an arbitrary index.
- @discussion If the index is not within the bounds of the receiver, the receiver will add placeholder objects until the index is within the bounds. After that the receiver inserts the default object at the index and returns it.
+ @discussion If the index is not within the bounds of the receiver, the receiver will add placeholder objects until the index is within the bounds. After that the receiver inserts the default object at the index and returns it. The placeholder object is [NSNull null].
  @param index An index into the receiver. Is allowed to be out of bounds.
  @param defaultObject An object that will be added at the index if the index is out of bounds or if the index points to a placeholder object.
  <b>Important</b> Raises an NSInvalidArgumentException if defaultObject is nil and the index is out of bounds.
@@ -56,7 +56,7 @@
 
 /*!
  @brief Replaces the object at index with anObject.
- @discussion If the passed index is not within the bounds of the receiver, the receiver will add placeholder objects until the index is within the bounds. After that the receiver inserts the passed object at the passed index.
+ @discussion If the passed index is not within the bounds of the receiver, the receiver will add placeholder objects until the index is within the bounds. After that the receiver inserts the passed object at the passed index. The placeholder object is [NSNull null].
  @param index The index of the object to be replaced. This value is allowed to exceed the bounds.
  @param anObject The object with which to replace the object at the passed index. This value must not be nil.
  <b>Important</b> Raises an NSInvalidArgumentException if anObject is nil.
@@ -66,7 +66,7 @@
 
 /*!
  @brief Returns an object in the receiver at an arbitrary index path.
- @discussion If the index path is not within the bounds of the receiver, the receiver will add placeholder objects until the index path is within the bounds. After that the receiver inserts the default object at the index path and returns it.
+ @discussion If the index path is not within the bounds of the receiver, the receiver will add placeholder objects until the index path is within the bounds. After that the receiver inserts the default object at the index path and returns it. The placeholder object is [NSNull null].
  @param indexPath An index path into the receiver. Is allowed to be out of bounds.
  @param defaultObject An object that will be added at the index path if the index path is out of bounds or the if the index path points to a placeholder object.
  <b>Important</b> Raises an NSInvalidArgumentException if defaultObject is nil and the index path is out of bounds.
@@ -78,7 +78,7 @@
 
 /*!
  @brief Replaces the object at indexPath with anObject.
- @discussion If the index path is not within the bounds of the receiver, the receiver will add placeholder objects until the index path is within the bounds. After that the receiver inserts the object at the index path.
+ @discussion If the index path is not within the bounds of the receiver, the receiver will add placeholder objects until the index path is within the bounds. After that the receiver inserts the object at the index path. The placeholder object is [NSNull null].
  @param indexPath The index path of the object to be replaced. This value is allowed to exceed the bounds.
  @param anObject The object with which to replace the object at the index path. This value must not be nil.
  <b>Important</b> Raises an NSInvalidArgumentException if anObject is nil.

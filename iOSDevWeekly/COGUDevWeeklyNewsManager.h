@@ -51,13 +51,38 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
 
 /*!
  @brief Fetches and adds all dev weekly issues to the database.
- @discussion Prefilling will happen only when there are no issues in the database yet. After successfully prefilling the database all issues are going to be persisted, too.
- @param success Executed after successfully prefilling the database.
- The context object is of type NSNumber and contains the count of issues that were fetched and added. The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler.
+ @discussion Prefilling will happen only when there are no dev weekly issues in the database yet. After successfully prefilling the database all dev weekly issues are going to be persisted, too. When there are dev weekly issues in the database before calling this method, no prefilling will be performed, but it is counted as successful prefilling nonetheless.
+ @param success Executed after successfully prefilling the database. Must not be nil.
+ The context object is of type NSNumber and contains the count of dev weekly issues that were fetched and added. The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler.
 
- @param failure Executed after prefilling the database failed. All changes that to the databse are rolled back to the state before starting the prefill operation. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
+ @param failure Executed after prefilling the database failed. Must not be nil. All changes to the database are rolled back to the state before starting the prefill operation. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
 */
 - (void)prefillIssuesDatabaseIfEmptySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+
+
+/*!
+ @brief Tests whether syncing the local database with the website is needed at all asynchronously.
+ @discussion Whether syncing is needed or not can be determined in the success handler only. When the failure handler is executed there is no implicit evidence contained that syncing is needed/not needed. You have to decide on yourself what to do in the failure case.
+ @param success Executed after the need for syncing could be determined successfully.
+ The context object is of type NSNumber an contains a boolean value with the following meanings:
+  YES: Syncing is needed.
+  NO: Syncing is not needed.
+
+ The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler
+ @param failure Executed after determine the need for syncing faild. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
+*/
+- (void)isSyncingIssuesDatabaseWithDevWeeklyNeededSuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+
+
+/*!
+ @brief Synchronizes the local database with the iOS Dev Weekly website.
+ @discussion Syncing is done even if there is no need for, because we have all dev weekly issues in the local database already. Please use @see isSyncingIssuesDatabaseWithDevWeeklyNeededSuccessHandler:failureHandler: before you call this method.
+ After successfully syncing the local database with all dev weekly issues from the iOS Dev Weekly website they are going to be persisted, too.  After successfully syncing, the local dev weekly issue count is equal to the dev weekly issue count on the website.
+ @param success Executed after successfully syncing the database with the website.
+ The context object is of type NSNumber and contains the count of issues that were added to the local database. The count is within the range of [0; current number of issues on the website]. The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler
+ @param failure Executed after syncing the database with the website failed. All changes to the database are rolled back to the state before starting the sync operation. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
+*/
+- (void)syncIssuesDatabaseWithDevWeeklySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
 
 
 /*!
@@ -109,13 +134,26 @@ typedef void (^COGUDevWeeklyNewsManagerFailureHandler)(NSError* error);
 
 
 /*!
- @brief Only fetches the latest issue asynchronously.
+ @brief Only fetches the latest dev weekly issue asynchronously.
  @discussion The database won't be touched after fetching did succeed.
- @param success Executed after successfully fetching the latest issue. The context object is nil always. @see COGUDevWeeklyNewsManagerSuccessHandler
- @param failure Executed after fetching all issues failed. @see COGUDevWeeklyNewsManagerFailureHandler
+ @param success Executed after successfully fetching the latest dev weekly issue.
+ The context object is of type GDataXMLDocument and represents the latest parsed iOS Dev Weekly HTML page. The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler
+ @param failure Executed after fetching the latest dev weekly issues failed. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
  @return Opaque fetcher object that can be used to cancel an ongoing fetch.
 */
 - (id)fetchLatestIssueOnlySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+
+
+/*!
+ @brief Only fetches the number of dev weekly issues on the website asynchronously.
+ @discussion The database won't be touched after fetching did succeed.
+ @success Executed after successfully fetching the number of dev weekly issues on the website.
+ The context object is of type NSNumber whose value is the number of dev weekly issues on the website. The value is in the range of [0; current number of dev weekly issues]. The context object is never nil. @see COGUDevWeeklyNewsManagerSuccessHandler
+ @param failure Executed after fetching the number of dev weekly issues failed. The error object may be nil. @see COGUDevWeeklyNewsManagerFailureHandler
+ @return Opaque fetcher object that can be used to cancel an ongoing fetch.
+*/
+- (id)fetchNumberOfIssuesOnWebsiteSuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+
 
 /*!
  @brief Cancels the fetching process.

@@ -41,6 +41,9 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 
 - (void)prefillIssuesDatabaseIfEmptySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
 {
+    NSAssert(success != nil, nil);
+    NSAssert(failure != nil, nil);
+
     __block NSError* prefillingError = nil;
     NSNumber* numberOfIssues = [self numberOfIssuesInDatabaseError:&prefillingError];
     if (numberOfIssues == nil)
@@ -56,6 +59,42 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
             success(@(issueDocuments.count));
         else
             failure(prefillingError);
+
+    } failureHandler:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+
+- (void)isSyncingIssuesDatabaseWithDevWeeklyNeededSuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+{
+    __block NSError* syncError = nil;
+    NSNumber* numberOfIssuesInDatabase = [self numberOfIssuesInDatabaseError:&syncError];
+    if (numberOfIssuesInDatabase == nil)
+        return failure(syncError);
+
+    [self fetchNumberOfIssuesOnWebsiteSuccessHandler:^(NSNumber* numberOfIssuesOnWebsite) {
+        BOOL isSyncingNeed = numberOfIssuesInDatabase != numberOfIssuesOnWebsite;
+        success(@(isSyncingNeed));
+    } failureHandler:^(NSError* error) {
+        failure(error);
+    }];
+}
+
+
+- (void)syncIssuesDatabaseWithDevWeeklySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+{
+    NSAssert(success != nil, nil);
+    NSAssert(failure != nil, nil);
+
+    __block NSError* syncError = nil;
+    [self fetchAllIssuesSuccessHandler:^(NSArray* issueDocuments) {
+        syncError = nil;
+        BOOL addingToDatabaseSucceeded = [self addIssuesToDatabaseAndPersists:issueDocuments error:&syncError];
+        if (addingToDatabaseSucceeded)
+            success(@(issueDocuments.count));
+        else
+            failure(syncError);
 
     } failureHandler:^(NSError *error) {
         failure(error);
@@ -172,6 +211,13 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
 
 
 - (id)fetchLatestIssueOnlySuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
+{
+    // TODO: implement
+    return nil;
+}
+
+
+- (id)fetchNumberOfIssuesOnWebsiteSuccessHandler:(COGUDevWeeklyNewsManagerSuccessHandler)success failureHandler:(COGUDevWeeklyNewsManagerFailureHandler)failure;
 {
     // TODO: implement
     return nil;
@@ -368,6 +414,8 @@ static NSString* const kAllIssuesFetcher = @"AllIssuesFetcher";
     static BOOL const kConfiguringCategoryEntitiesSucceeded = YES;
     static BOOL const kConfiguringCategoryEntitiesFailed = NO;
     __block BOOL configuringCategoryEntitiesSucceeded = kConfiguringCategoryEntitiesFailed;
+
+    issueEntity.newsItems = [NSOrderedSet orderedSet];
 
     NSArray* issueCategoryElements = [self _categoryElementsInIssue:issue error:error];
     if (issueCategoryElements == nil)
